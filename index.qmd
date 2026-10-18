@@ -10,14 +10,49 @@ bibliography: references.bib
 
 First choose your language and delete the section of the document in the other language.
 
-Answer the questions precisely but briefly.
+Answer the questions precisely but briefly: the questions are detailed to guide you so there are many of them.
 Don't waste your time repeating the course: you have all documents with you, copying their content is not valuable.
 
 # Français
 
 ## Estimation du nombre d'espèces
 
+Vous disposez de trois inventaires de 10 hectares de forêt (environ 5000 arbres) :
+
+- A: 100 espèces dont 20 singletons et 10 doubletons,
+- B: 80 espèces dont 30 singletons et 20 doubletons,
+- C: 150 espèces dont 100 singletons et 50 doubletons.
+
+Estimez rapidement la richesse asymptotique de la forêt en utilisant les estimateurs jackknife et les règles de @Brose2003.
+
 ## Diversité phylogénétique
+
+La fonction suivante permet de créer un arbre phylogénétique avec 3 espèces.
+Le paramètre `h` fixe la hauteur à laquelle les espèces A et B se séparent.
+
+```{r}
+tree_3sp <- function(h) {
+  NewickABC <- paste0("(C:1,(A:", 1 - h, ",B:", 1 - h, "):", h, ");")
+  phyloABC <- ape::read.tree(text = NewickABC)
+  plot(phyloABC, direction = "downwards", srt = 90)
+  axis(2)
+}
+# Make a tree
+tree_3sp(0.5)
+```
+
+> Quelle est la diversité phylogénétique d'ordre 0 (PD de Faith) d'une communauté contenant les trois espèces, dont l'arbre phylogénétique est celui de la figure ?
+
+> Quelle est l'étendue possible des valeurs de `h` ?
+
+> Quel est l'effet de `h` sur la valeur de PD ?
+
+> Ecrivez la valeur de PD en fonction de \`h\`.
+
+> Quel est la richesse de la communauté ?
+> Expliquez comment $h$ permet de prendre en compte la proximité entre les espèces B et C.
+
+> Si les botanistes sont en désaccord sur la synonymie ou non des espèces B et C et qu'une phylogénie montre que leur distance $h$ est très faible, proposez une méthode pour les mettre d'accord.
 
 ## Distribution lognormale
 
