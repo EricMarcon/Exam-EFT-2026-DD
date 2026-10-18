@@ -1,0 +1,96 @@
+---
+title: "Species Diversity and Distributions"
+author: "Your name here"
+format: html
+editor: visual
+bibliography: references.bib
+---
+
+# Instructions
+
+First choose your language and delete the section of the document in the other language.
+
+# Français
+
+## Pielou (1972)
+
+L'objectif de cette dernière partie est de redécouvrir et de moderniser les résultats de @pielou1972.
+Les données sont des relevés d'abondances de pucerons du genre *Dactynotus* sur des plantes du genre *Solidago* (Asteraceae), considérées comme leurs habitats possibles.
+La diversité de chacun des *Solidago* est celle des espèces de pucerons qu'il abrite.
+
+Nous allons d'abord évaluer la diversité des pucerons dans leurs différents habitats.
+
+Ensuite, nous allons suivre Pielou en étudiant la diversité des habitats occupés par chaque espèce de puceron.
+En considérant que chaque *Solidago* constitue une niche écologique distincte pour les pucerons, un puceron généraliste occupera plus de niches qu'un puceron spécialiste.
+La largeur de niche de chaque espèce de puceron.
+
+Enfin, nous verrons la notion d'information mutuelle, classique de la littérature sur l'entropie.
+
+### Données
+
+Les données sont dans le fichier `Pielou1972.csv`.
+
+```{r}
+library("tidyverse")
+library("divent")
+# Read the file
+read_csv("data/Pielou1972.csv") %>% 
+  # Replace missing values by zeros
+  mutate(across(everything(), ~ replace_na(.x, 0))) %>% 
+  # Make an abundances object
+  as_abundances() ->
+  pielou_1972
+# Show it
+pielou_1972
+```
+
+> Combien y a–t-il d'espèces de pucerons ?
+
+```{r}
+ncol(pielou_1972) - 2
+```
+
+> Combien y a–t-il de plantes différentes ?
+
+```{r}
+nrow(pielou_1972)
+```
+
+Etant donné le protocole expérimental (toutes les espèces étudiées sont dans les données, il n'y a pas d'espèce non observée), la diversité sera toujours calculée au niveau de l'échantillon: l'argument `estimator = "naive"` sera utilisé systématiquement.
+
+### Diversité des pucerons
+
+> Compter le nombre d'espèces de pucerons sur chaque plante.
+
+```{r}
+div_richness(pielou_1972, estimator = "naive")
+```
+
+> Quelle est la richesse maximale ?
+
+> Calculer la diversité (pas l'entropie) de Simpson.
+
+```{r}
+div_hill(pielou_1972, q = 2, estimator = "naive")
+```
+
+> Quelle est la plante la plus diverse au sens de Simpson ?
+
+> Tracer les profils de diversité de tous les *Solidago*.
+
+```{r}
+profile_hill(pielou_1972, estimator = "naive") %>% 
+  autoplot()
+```
+
+> Quelle est la plante apparemment la plus diverse, quel que soit l'ordre de diversité ?
+
+```{r}
+div_hill(pielou_1972, q = 5, estimator = "naive")
+```
+
+> *S. juncea* est moins riche mais plus équitable: son profil de diversité décroit moins vite.
+> Vérifiez si les courbes se croisent pour $q>2$.
+
+> Deux profils sont plats.
+> Expliquez pourquoi (la raison n'est pas la même).
