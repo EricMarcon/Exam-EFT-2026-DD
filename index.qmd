@@ -12,23 +12,70 @@ First choose your language and delete the section of the document in the other l
 
 Answer the questions precisely but briefly: the questions are detailed to guide you so there are many of them.
 Don't waste your time repeating the course: you have all documents with you, copying their content is not valuable.
+To answer factual questions, you don't need to make sentences: e.g., just write "4." to answer the question "how much are 2 +2?".
 
 # Français
 
 ## Estimation du nombre d'espèces
 
-Vous disposez de trois inventaires de 10 hectares de forêt (environ 5000 arbres) :
+*Vous disposez de trois inventaires de 10 hectares de forêt (environ 5000 arbres) :*
 
-- A: 100 espèces dont 20 singletons et 10 doubletons,
-- B: 80 espèces dont 30 singletons et 20 doubletons,
-- C: 150 espèces dont 100 singletons et 50 doubletons.
+- *A : 100 espèces dont 20 singletons (*$S_1$), 10 doubletons ($S_2$) et 3 tripletons ($S_3$),
+- *B : 80 espèces dont 30 singletons, 20 doubletons et 5 tripletons,*
+- *C : 150 espèces dont 110 singletons, 30 doubletons et 10 tripletons.*
 
-Estimez rapidement la richesse asymptotique de la forêt en utilisant les estimateurs jackknife et les règles de @Brose2003.
+*Rappel des formules des estimateurs, avec les notations du cours :*
+
+- $S_{J1} = S_{>0} + S_1$
+- $S_{J2} = S_{>0} + 2 S_1 - S_2$
+- $S_{J3} = S_{>0} + 3 S_1 - 3 S_2 + S_3$
+
+> Estimez rapidement la richesse asymptotique de la forêt en utilisant les estimateurs jackknife et les règles de @Brose2003.
+
+Estimation avec le jackknife 1 et couverture :
+
+```{r}
+# A
+(S_A <- 100 + 20)
+(C_A <- 100 / S_A)
+# B
+(S_B <- 80 + 30)
+(C_B <- 80 / S_B)
+# C
+(S_C <- 150 + 110)
+(C_C <- 150 / S_C)
+```
+
+Le nombre d'espèce estimé est 120 selon le jackknife 1 pour la forêt A.
+
+Le taux de couverture est trop faible pour B et C : l'estimation est tenté avec le jackknife 2 :
+
+```{r}
+# B
+(S_B <- 80 + 2 * 30 - 20)
+(C_B <- 80 / S_B)
+# C
+(S_C <- 150 + 2 * 110 - 30)
+(C_C <- 150 / S_C)
+```
+
+L'estimation de la forêt B est 120 espèces selon le jackknife 2.
+
+Le taux de couverture de la forêt C est encore trop faible.
+Estimation avec le Jackknife 3:
+
+```{r}
+# C
+(S_C = 150 + 3 * 110 - 3 * 30 + 10)
+(C_C <- 150 / S_C)
+```
+
+Le taux de couverture est encore inférieur à la limite conseillée par Brose et al. (38%) mais tout l'inventaire est pris en compte : il n'y a pas d'espèces observées plus de 3 fois (110 + 30 + 10 = 150).
+L'inventaire est clairement insuffisant pour estimer la richesse convenablement.
 
 ## Diversité phylogénétique
 
-La fonction suivante permet de créer un arbre phylogénétique avec 3 espèces.
-Le paramètre `h` fixe la hauteur à laquelle les espèces A et B se séparent.
+*La fonction suivante permet de créer un arbre phylogénétique avec 3 espèces. Le paramètre `h` fixe la hauteur à laquelle les espèces A et B se séparent.*
 
 ```{r}
 tree_3sp <- function(h) {
@@ -43,30 +90,135 @@ tree_3sp(0.5)
 
 > Quelle est la diversité phylogénétique d'ordre 0 (PD de Faith) d'une communauté contenant les trois espèces, dont l'arbre phylogénétique est celui de la figure ?
 
+2,5 espèces effectives.
+
 > Quelle est l'étendue possible des valeurs de `h` ?
+
+0 à 1.
 
 > Quel est l'effet de `h` sur la valeur de PD ?
 
+PD augmente avec $h$ parce que la double branche entre A, B et leur ancêtre commune remplace branche simple entre l'ancêtre et la racine de l'arbre.
+
 > Ecrivez la valeur de PD en fonction de \`h\`.
 
-> Quel est la richesse de la communauté ?
+$PD = 1 + 2 * h + (1 - h) = 2 + h$.
+
+> Quel est la richesse (taxonomique, pas phylogénétique) de la communauté ?
 > Expliquez comment $h$ permet de prendre en compte la proximité entre les espèces B et C.
 
-> Si les botanistes sont en désaccord sur la synonymie ou non des espèces B et C et qu'une phylogénie montre que leur distance $h$ est très faible, proposez une méthode pour les mettre d'accord.
+La communauté contient 3 espèces.
+C'est aussi la valeur de PD pour $h = 1$, qui considère que les espèces A et B sont complètement distinctes.
+Pour $h = 0$ à l'inverse, on considère que les espèces B et C sont identiques : PD = 2.
+
+> Si les botanistes sont en désaccord sur la synonymie ou non des espèces B et C et qu'une phylogénie montre que leur distance $h$ est faible, proposez une méthode pour les mettre d'accord.
+
+La valeur de $h$ décrit la distance entre les espèces B et C : PD la prend en compte puisque sa valeur est $2 + h$.
+PD permet donc de décrire la richesse sans trancher entre 2 et 3 espèces, cas extrêmes de $h = 0$ ou $h = 1$.
 
 ## Distribution lognormale
 
+*On tire deux distributions aléatoires dans une loi lognormale. Leur taille et leur richesse sont identiques, seul l'écart-type de la distribution varie.*
+
+```{r}
+# Set the random seed for reproducibility
+set.seed(973)
+# Size and richness
+the_size <- 1E6
+the_richness <- 100
+# Draw the first community
+rcommunity(
+  1, 
+  size = the_size, 
+  species_number = the_richness, 
+  distribution = "lnorm", 
+  sd_lnorm = 1
+) %>% 
+  # Give it a name
+  mutate(site = "sigma = 1") %>% 
+  # Bind the second community data in the same tibble
+  bind_rows(
+    # Draw the second community
+    rcommunity(
+      1, 
+      size = the_size, 
+      species_number = the_richness, 
+      distribution = "lnorm", 
+      sd_lnorm = 2
+    ) %>% 
+      # Give it a name
+      mutate(site = "sigma = 2")
+  ) -> 
+  # Store the result
+  comm_lnorm
+# Whittaker plot
+autoplot(comm_lnorm)
+```
+
+> Quelle est la richesse des communautés observées ?
+> Quel est l'abondance de l'espèce la plus rare (approximativement, lue sur le graphique) comparativement au nombre d'arbres total ?
+
+Les 100 espèces demandées sont observées dans un échantillon très grand d'un million d'arbres.
+L'espèce la plus rare, dans la deuxième communauté, est représentée par moins de 10 individus.
+
+> Qu'observe-t-on pour un échantillon de taille raisonnable, disons 6,25ha avec 600 arbres / ha ?
+> Faites la figure.
+> Attention à ne pas détruire la variable `comm_lnorm` en réutilisant le code.
+
+```{r}
+set.seed(973)
+the_size <- 6.25 * 600
+rcommunity(
+  1, 
+  size = the_size, 
+  species_number = the_richness, 
+  distribution = "lnorm", 
+  sd_lnorm = 1
+) %>% 
+  mutate(site = "sigma = 1") %>% 
+  bind_rows(
+    rcommunity(
+      1, 
+      size = the_size, 
+      species_number = the_richness, 
+      distribution = "lnorm", 
+      sd_lnorm = 2
+    ) %>% 
+      mutate(site = "sigma = 2")
+  )  %>% 
+  autoplot()
+```
+
+On n'observe pas toutes les espèces de la deuxième communauté.
+
+> Tracez le profil de diversité des deux communautés
+
+```{r}
+profile_hill(comm_lnorm) %>% 
+  autoplot()
+```
+
+> Quelle est la communauté la plus diverse ?
+> Faites le lien avec la valeur de $\sigma$.
+
+La première parce que ses probabilités ont une variabilité plus faible : les probabilité sont plus proches de l'équitabilité.
+Dans la deuxième communauté, les abondances décroissent très rapidement, donnant lieu à plus d'espèces rares.
+
 ## Pielou (1972)
 
-L'objectif de cette dernière partie est de redécouvrir et de moderniser les résultats de @pielou1972.
-Les données sont des relevés d'abondances de pucerons du genre *Dactynotus* sur des plantes du genre *Solidago* (Asteraceae), considérées comme leurs habitats possibles.
-La diversité de chacun des *Solidago* est celle des espèces de pucerons qu'il abrite.
+*L'objectif de cette dernière partie est de redécouvrir et de moderniser les résultats de @pielou1972. Les données sont des relevés d'abondances de pucerons du genre* Dactynotus *sur des plantes du genre* Solidago *(Asteraceae), considérées comme leurs habitats possibles. La diversité de chacun des* Solidago *est celle des espèces de pucerons qu'il abrite.*
+
+|                                    |                                    |
+|------------------------------------|------------------------------------|
+| ![](images/Dactynotus_pieloui.jpg) | ![](images/Solidago_nemoralis.jpg) |
+
+: *Dactynotus pieloui* et *Solidago nemoralis*
 
 ### Données
 
-Nous allons d'abord évaluer la diversité des pucerons dans leurs différents habitats.
+*Nous allons d'abord évaluer la diversité des pucerons dans leurs différents habitats.*
 
-Les données sont dans le fichier `Pielou1972.csv`.
+*Les données sont dans le fichier `Pielou1972.csv`.*
 
 ```{r}
 library("tidyverse")
@@ -96,7 +248,7 @@ ncol(pielou_1972) - 2
 nrow(pielou_1972)
 ```
 
-Etant donné le protocole expérimental (toutes les espèces étudiées sont dans les données, il n'y a pas d'espèce non observée), la diversité sera toujours calculée au niveau de l'échantillon: l'argument `estimator = "naive"` sera utilisé systématiquement.
+*Etant donné le protocole expérimental (toutes les espèces étudiées sont dans les données, il n'y a pas d'espèce non observée), la diversité sera toujours calculée au niveau de l'échantillon: l'argument* `estimator = "naive"` *sera utilisé systématiquement.*
 
 ### Diversité des pucerons
 
@@ -108,6 +260,8 @@ div_richness(pielou_1972, estimator = "naive")
 
 > Quelle est la richesse maximale ?
 
+8 espèces de pucerons sur les 10 possibles.
+
 > Calculer la diversité (pas l'entropie) de Simpson.
 
 ```{r}
@@ -115,6 +269,8 @@ div_hill(pielou_1972, q = 2, estimator = "naive")
 ```
 
 > Quelle est la plante la plus diverse au sens de Simpson ?
+
+*Solidago juncea*.
 
 > Tracer les profils de diversité de tous les *Solidago*.
 
@@ -125,34 +281,40 @@ profile_hill(pielou_1972, estimator = "naive") %>%
 
 > Quelle est la plante apparemment la plus diverse, quel que soit l'ordre de diversité ?
 
+*S. juncea*.
+
+> Vérifiez si les courbes se croisent pour $q>2$.
+
+*S. gigantea* est moins riche mais plus équitable: son profil de diversité décroit moins vite.
+On peut comparer la diversité d'ordre 5 par exemple :
+
 ```{r}
 div_hill(pielou_1972, q = 5, estimator = "naive")
 ```
 
-> *S. juncea* est moins riche mais plus équitable: son profil de diversité décroit moins vite.
-> Vérifiez si les courbes se croisent pour $q>2$.
+La diversité d'ordre 5 de *S. gigantea* dépasse celle de *S. juncea* : aucun des deux habitats n'est plus divers que l'autre quel que soit le point de vue.
 
 > Deux profils sont plats.
-> Expliquez pourquoi (la raison n'est pas la même).
+> Expliquez pourquoi.
 
-Décomposez la diversité.
-Résumez cette décomposition en quelques phrases.
+*S_flexicaulis* occupe deux habitats avec la même abondance.
+
+> Décomposez la diversité.
+> Résumez cette décomposition en une ou quelques phrases.
 
 ```{r}
 div_part(pielou_1972, estimator = "naive")
 ```
 
+La métacommunauté des *Soledago* est composée de 6,35 espèces effectives de pucerons (diversité $\gamma$), décomposable en 3.3 espèces par habitat (diversité $\alpha$) fois 1.91 habitats (diversité $\beta$) effectifs, c'est à dire sans espèce en commun.
+
 ### Largeur de niches
 
-Ensuite, nous allons suivre Pielou en étudiant la diversité des habitats occupés par chaque espèce de puceron.
-A partir d'ici, vous ne pouvez plus appliquer simplement le contenu du cours, mais vous devez étendre les notions que vous connaissez à une approche nouvelle.
+*Pour la suite, nous allons suivre Pielou en étudiant la diversité des habitats occupés par chaque espèce de puceron. A partir d'ici, vous ne pouvez plus appliquer simplement le contenu du cours, mais vous devez étendre les notions que vous connaissez à une approche nouvelle.*
 
-En considérant que chaque *Solidago* constitue une niche écologique distincte pour les pucerons, un puceron généraliste occupera plus de niches qu'un puceron spécialiste.
-La largeur de niche de chaque espèce de puceron est définie dans un premier temps par le nombre d'habitats différents qu'il occupe.
+*En considérant que chaque* Solidago *constitue un habitat distinct pour une espèce de puceron, le nombre d'habitat occupés est un proxy de la taille de sa niche. Un puceron généraliste occupera plus d'habitats (autrement dit, une niche plus large) qu'un puceron spécialiste. La largeur de niche de chaque espèce de puceron est donc définie dans un premier temps par le nombre d'habitats différents qu'il occupe.*
 
-Les données doivent être organisées différemment :
-
-- une matrice avec les espèces de pucerons en ligne et les habitats en colonnes.
+*Les données doivent être organisées différemment avec les espèces de pucerons en ligne et les habitats en colonnes, ce qui nécessite de passer par une matrice de données et de la transposer. Comme le code est un peu laborieux, il est donné ci-dessous.*
 
 ```{r}
 # Read the file
@@ -164,7 +326,7 @@ read_csv("data/Pielou1972.csv") %>%
 pielou_raw %>% 
   pull(site) ->
   pielou_habitats
-# Make the matrix
+# Make a matrix
 pielou_raw %>%
   # Remove the site
   select(-site) %>%
@@ -173,32 +335,19 @@ pielou_raw %>%
   # Transpose the matrix
   t() ->
   pielou_niches.matrix
-# Display it
-pielou_niches.matrix
-# Add the column names (difficult to read after that)
+# Add the column names
 colnames(pielou_niches.matrix) <- pielou_habitats
-```
-
-- un objet de classe `abundances` pour calculer la diversité. Pour la suite, nous suivrons Pielou en pondérant les "sites", c'est-à-dire les espèces de pucerons, par leur abondance.
-
-```{r}
 pielou_niches.matrix %>% 
-  as_abundances() ->
-  pielou_niches.abd
+  # Make an abundances object
+  as_abundances() %>%
+  # Set equal weights
+  mutate(weight = 1) ->
+  pielou_niches
 # Display it
-pielou_niches.abd
+pielou_niches
 ```
 
-Le nombre d'habitats occupés par chaque espèce de puceron peut être compté directement dans la matrice:
-
-```{r}
-# Make a logical matrix: TRUE when abundance > 0
-(pielou_niches.matrix > 0) %>% 
-  # Count the number of TRUE's per aphid species
-  rowSums()
-```
-
-Ou bien avec les fonctions de calcul de la diversité habituelles, appliquées à ce jeu de données inhabituel :
+*Le nombre d'habitats occupés par chaque espèce de puceron peut être compté avec les fonctions de calcul de la diversité habituelles, appliquées à ce jeu de données inhabituel :*
 
 ```{r}
 div_richness(pielou_niches.abd, estimator = "naive")
@@ -207,28 +356,38 @@ div_richness(pielou_niches.abd, estimator = "naive")
 > Quelle est l'espèce de pucerons la plus généraliste ?
 > Quelle proportion des habitats occupe-t-elle ?
 
+*D. pieloui* occupe 10 habitats sur les 12 possibles.
+
 > Quelle est l'espèce la plus spécialiste ?
+
+*D_solirostratus* n'occupe qu'un seul habitat.
 
 La diversité des habitats occupés peut prendre en compte les abondances.
 
-> Tracez les profils de diversité des pucerons et faites le lien entre le nombre effectif de Soledagos et la largeur de niche.
+> Tracez les profils de diversité des pucerons et faites le lien entre le nombre effectif de *Soledago* et la largeur de niche.
 
 ```{r}
 profile_hill(pielou_niches_abd, estimator = "naive") %>% 
   autoplot()
 ```
 
-> 
+Le nombre effectif d'habitats (= de *Soledago*) occupé par une espèce de pucerons est le nombre d'habitats équiprobables de même entropie que les données.
+Ce nombre effectif d'habitats généralise la largeur de niche définie précédemment, en choisissant l'importance donnée aux habitats rares (c'est-à-dire peu occupés).
 
-> Pielou s'intéresse seulement à l'entropie de Shannon.
-> Calculez sa valeur pour chaque espèce de puceron.
+> Pielou s'intéresse seulement à l'entropie de Shannon dans son article, sous une forme archaïque appelée formule de Brillouin, ce qui rend l'article très difficile à lire.
+> @Levins1968 avait le premier proposé de mesurer la largeur de niche de cette façon, en proposant deux métriques : $-\sum_i{p_i \log(p_i)}$ et $\sum_i{\frac{1}{p_i^2}}$ où $p_i$ est la probabilité qu'un puceron se trouve dans l'habitat $i$.
+> Identifiez ces deux métriques.
 
-```{r}
-ent_shannon(pielou_niches.abd, estimator = "naive")
-```
+L'entropie de Shannon et la diversité de Simpson.
+La diversité de Simpson est dans le profil de diversité ci-dessus.
 
-> Que signifie une entropie nulle ?
+### Chevauchement des niches
 
-### Information mutuelle
+*Pielou veut évaluer le chevauchement des niches en plus de leur largeur. Le raisonnement est plus clair avec les nombres de Hill. Si les niches ne se chevauchent pas du tout, on trouve une seule espèce par habitat à condition bien sûr qu'il y ait moins d'espèces que d'habitats. A l'inverse, si toutes les espèces sont totalement généralistes, le nombre d'espèces par habitat est celui des espèces.*
 
-Pour finir, nous verrons la notion d'information mutuelle, classique de la littérature sur l'entropie.
+> Quelle est la mesure qui rend compte du chevauchement des niches ?
+> Donnez sa valeur pour q = 1.
+
+C'est la diversité $\alpha$ : le nombre moyen d'espèces par habitat.
+Elle a été calculée plus haut : elle vaut 3,3.
+Un peu plus de trois espèces occupent le même habitat, alors que les valeurs possibles varient de 1 à 10.
