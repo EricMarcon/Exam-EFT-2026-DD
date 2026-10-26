@@ -219,6 +219,8 @@ pielou_1972
 
 > Partition the diversity.
 > Summarise this partitioning in one or a few sentences.
+> Caution: because of a bug in the published version of package divent, you can't use argument `estimator = "naive"` in the `div_part()` function.
+> Partition the asymptotic diversity with its default estimator.
 
 ### Niche width
 
@@ -437,6 +439,8 @@ pielou_1972
 
 > Décomposez la diversité.
 > Résumez cette décomposition en une ou quelques phrases.
+> Attention : en raison d'un bug dans la version publiée du package divent, vous ne pouvez pas utiliser l'argument `estimator = "naive"` dans la fonction `div_part()`.
+> Faites la décomposition de la diversité asymptotique avec l'estimateur par défaut.
 
 ### Largeur de niches
 
