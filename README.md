@@ -1,4 +1,4 @@
-This is a mock exam for EFT students to practise the procedures required for the actual exam.
+This is the 2026 Species Diversity and Distributions exam.
 
 1. Click on the green button "Use this template" and choose "Create a new repository".
 1. Type a meaningful repository's name and click on "Create repository".
