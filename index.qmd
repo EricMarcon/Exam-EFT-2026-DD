@@ -124,7 +124,7 @@ tree_3sp(0.5)
 
 > What is the order-0 phylogenetic diversity (Faith's PD) of a community containing the three species, whose phylogenetic tree is shown in the figure?
 
-2.5 effective species.
+PD is the sum of branch lengths, i.e. 1 + 0.5 + 0.5 + 0.5 = 2.5 effective species.
 
 > What is the possible range of values for `h`?
 
@@ -340,6 +340,12 @@ div_part(pielou_1972, estimator = "naive")
 
 The *Soledago* metacommunity comprises 6.35 effective aphid species (diversity $\gamma$), which can be broken down into 3.3 species per habitat (diversity $\alpha$) multiplied by 1.91 effective habitats (diversity $\beta$), i.e. with no species in common.
 
+With the asymptotic estimators (bug in divent published version), the values are:
+
+```{r}
+div_part(pielou_1972)
+```
+
 ### Niche width
 
 *Moving forward, we will follow Pielou's approach by studying the diversity of habitats occupied by each aphid species. From this point onwards, you can no longer simply apply the course content; instead, you must extend the concepts you are familiar with to a new approach.*
@@ -500,7 +506,7 @@ tree_3sp(0.5)
 
 > Quelle est la diversité phylogénétique d'ordre 0 (PD de Faith) d'une communauté contenant les trois espèces, dont l'arbre phylogénétique est celui de la figure ?
 
-2,5 espèces effectives.
+PD est la longueur totale de toutes les branches, c'est-à-dire 1 + 0,5 + 0,5 + 0,5 = 2,5 espèces effectives.
 
 > Quelle est l'étendue possible des valeurs de `h` ?
 
@@ -719,6 +725,13 @@ div_part(pielou_1972, estimator = "naive")
 ```
 
 La métacommunauté des *Soledago* est composée de 6,35 espèces effectives de pucerons (diversité $\gamma$), décomposable en 3.3 espèces par habitat (diversité $\alpha$) fois 1.91 habitats (diversité $\beta$) effectifs, c'est à dire sans espèce en commun.
+
+Avec un estimator asymptotique (bug dans la version publique de divent), les valeurs sont:
+
+```{r}
+div_part(pielou_1972)
+```
+
 
 ### Largeur de niches
 
