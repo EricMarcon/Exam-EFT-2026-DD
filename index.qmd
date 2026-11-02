@@ -105,9 +105,9 @@ tree_3sp(0.5)
 > Express the value of PD in terms of `h`.
 
 > What is the richness (taxonomic, not phylogenetic) of the community?
-> Explain how $h$ allows us to take into account the closeness between species B and C.
+> Explain how $h$ allows us to take into account the closeness between species B and A.
 
-> If botanists disagree on whether species B and C are synonymous and a phylogeny shows that their distance $h$ is small, suggest a method to help them reach agreement.
+> If botanists disagree on whether species B and A are synonymous and a phylogeny shows that their distance $h$ is small, suggest a method to help them reach agreement.
 
 ## Lognormal distribution
 
@@ -325,9 +325,9 @@ tree_3sp(0.5)
 > Ecrivez la valeur de PD en fonction de \`h\`.
 
 > Quel est la richesse (taxonomique, pas phylogénétique) de la communauté ?
-> Expliquez comment $h$ permet de prendre en compte la proximité entre les espèces B et C.
+> Expliquez comment $h$ permet de prendre en compte la proximité entre les espèces B et A.
 
-> Si les botanistes sont en désaccord sur la synonymie ou non des espèces B et C et qu'une phylogénie montre que leur distance $h$ est faible, proposez une méthode pour les mettre d'accord.
+> Si les botanistes sont en désaccord sur la synonymie ou non des espèces B et A et qu'une phylogénie montre que leur distance $h$ est faible, proposez une méthode pour les mettre d'accord.
 
 ## Distribution lognormale
 
