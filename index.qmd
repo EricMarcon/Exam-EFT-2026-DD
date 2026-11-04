@@ -81,7 +81,8 @@ Ne modifiez pas le projet après la fin de l'examen.
 
 > Quickly estimate the asymptotic richness of the forest using the jackknife estimators and the rules of @Brose2003.
 
-Estimation using jackknife 1 and coverage:
+Estimation using jackknife 1 and coverage.
+The estimate is `S_X` for forest X and the coverage is `C_X`.
 
 ```{r}
 # A
@@ -97,7 +98,8 @@ Estimation using jackknife 1 and coverage:
 
 The estimated number of species is 120 according to jackknife 1 for forest A.
 
-The coverage rate is too low for B and C: an estimate is attempted using jackknife 2:
+The coverage rate is too low for B and C: an estimate is attempted using jackknife 2.
+The coverage is now calculated with the jackknife 2 (so it decreases as the estimated number of species increases).
 
 ```{r}
 # B
@@ -108,10 +110,10 @@ The coverage rate is too low for B and C: an estimate is attempted using jackkni
 (C_C <- 150 / S_C)
 ```
 
-The estimate for forest B is 120 species according to Jackknife 2.
+The estimate for forest B is 120 species according to jackknife 2.
 
 The coverage rate for Forest C is still too low.
-Estimate using the Jackknife 3 method:
+Estimate using the jackknife 3.
 
 ```{r}
 # C
@@ -148,6 +150,13 @@ PD is the sum of branch lengths, i.e. 1 + 0.5 + 0.5 + 0.5 = 2.5 effective specie
 > What effect does `h` have on the value of PD?
 
 PD increases with $h$ because the double branch between A, B and their common ancestor replaces the single branch between the ancestor and the root of the tree.
+Note: `h` could just as easily be the length of the branch between the common ancestor of A and B and the root of the tree.
+To check this, change its value in the last line of the code block.
+
+```{r}
+# Small value of h
+tree_3sp(0.1)
+```
 
 > Express the value of PD in terms of `h`.
 
@@ -479,7 +488,8 @@ Estimation avec le jackknife 1 et couverture :
 
 Le nombre d'espèce estimé est 120 selon le jackknife 1 pour la forêt A.
 
-Le taux de couverture est trop faible pour B et C : l'estimation est tenté avec le jackknife 2 :
+Le taux de couverture est trop faible pour B et C : l'estimation est tentée avec le jackknife 2.
+Le taux de couverture est aussi calculé avec le jackknife 2: il diminue alors que le nombre d'espèces estimé augmente.
 
 ```{r}
 # B
@@ -530,6 +540,13 @@ PD est la longueur totale de toutes les branches, c'est-à-dire 1 + 0,5 + 0,5 + 
 > Quel est l'effet de `h` sur la valeur de PD ?
 
 PD augmente avec $h$ parce que la double branche entre A, B et leur ancêtre commune remplace branche simple entre l'ancêtre et la racine de l'arbre.
+Remarque: `h` pourrait aussi bien être la longueur de la branche entre l'ancêtre de A et B et la racine de l'arbre.
+Pour vérifier, il faut changer sa valeur dans la dernière ligne du bloc de code.
+
+```{r}
+# Small value of h
+tree_3sp(0.1)
+```
 
 > Ecrivez la valeur de PD en fonction de \`h\`.
 
