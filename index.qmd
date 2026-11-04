@@ -1,9 +1,24 @@
 ---
 title: "Species Diversity and Distributions"
-author: "Your name here"
-format: html
+author: "Eric Marcon"
+format:
+  html:
+    number-sections: true
+    toc: true
 editor: visual
 bibliography: references.bib
+# https://quarto.org/docs/computations/execution-options.html#output-options
+execute:
+  # show code chunk output
+  include: true
+  # Show the code in the output
+  echo: true
+  # Show messages
+  message: false
+  # Show warnings
+  warning: true
+  # Cache code results
+  cache: false
 ---
 
 # Instructions
@@ -731,7 +746,6 @@ Avec un estimator asymptotique (bug dans la version publique de divent), les val
 ```{r}
 div_part(pielou_1972)
 ```
-
 
 ### Largeur de niches
 
