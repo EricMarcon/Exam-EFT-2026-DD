@@ -5,6 +5,10 @@ format:
   html:
     number-sections: true
     toc: true
+    code-links:
+    - text: "GitHub"
+      icon: github
+      href: https://github.com/EricMarcon/Exam-EFT-2026-DD
 editor: visual
 bibliography: references.bib
 # https://quarto.org/docs/computations/execution-options.html#output-options
