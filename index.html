@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Your name here">
+<meta name="author" content="Eric Marcon">
 
 <title>Species Diversity and Distributions</title>
 <style>
@@ -95,7 +95,7 @@ div.csl-indent {
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="index_files/libs/bootstrap/bootstrap-7a1ba01e1618e08d8f307002997fc2d6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="index_files/libs/bootstrap/bootstrap-43002380c1ab0959773ff275c485c642.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
@@ -129,10 +129,48 @@ window.Quarto = {
 
 </head>
 
-<body class="fullcontent quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+<body class="quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#instructions" id="toc-instructions" class="nav-link active" data-scroll-target="#instructions"><span class="header-section-number">1</span> Instructions</a>
+  <ul class="collapse">
+  <li><a href="#english" id="toc-english" class="nav-link" data-scroll-target="#english"><span class="header-section-number">1.1</span> English</a></li>
+  <li><a href="#français" id="toc-français" class="nav-link" data-scroll-target="#français"><span class="header-section-number">1.2</span> Français</a></li>
+  </ul></li>
+  <li><a href="#english-1" id="toc-english-1" class="nav-link" data-scroll-target="#english-1"><span class="header-section-number">2</span> English</a>
+  <ul class="collapse">
+  <li><a href="#estimating-the-number-of-species" id="toc-estimating-the-number-of-species" class="nav-link" data-scroll-target="#estimating-the-number-of-species"><span class="header-section-number">2.1</span> Estimating the number of species</a></li>
+  <li><a href="#phylogenetic-diversity" id="toc-phylogenetic-diversity" class="nav-link" data-scroll-target="#phylogenetic-diversity"><span class="header-section-number">2.2</span> Phylogenetic diversity</a></li>
+  <li><a href="#lognormal-distribution" id="toc-lognormal-distribution" class="nav-link" data-scroll-target="#lognormal-distribution"><span class="header-section-number">2.3</span> Lognormal distribution</a></li>
+  <li><a href="#pielou-1972" id="toc-pielou-1972" class="nav-link" data-scroll-target="#pielou-1972"><span class="header-section-number">2.4</span> Pielou (1972)</a>
+  <ul class="collapse">
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data"><span class="header-section-number">2.4.1</span> Data</a></li>
+  <li><a href="#aphid-diversity" id="toc-aphid-diversity" class="nav-link" data-scroll-target="#aphid-diversity"><span class="header-section-number">2.4.2</span> Aphid diversity</a></li>
+  <li><a href="#niche-width" id="toc-niche-width" class="nav-link" data-scroll-target="#niche-width"><span class="header-section-number">2.4.3</span> Niche width</a></li>
+  <li><a href="#niche-overlap" id="toc-niche-overlap" class="nav-link" data-scroll-target="#niche-overlap"><span class="header-section-number">2.4.4</span> Niche overlap</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#français-1" id="toc-français-1" class="nav-link" data-scroll-target="#français-1"><span class="header-section-number">3</span> Français</a>
+  <ul class="collapse">
+  <li><a href="#estimation-du-nombre-despèces" id="toc-estimation-du-nombre-despèces" class="nav-link" data-scroll-target="#estimation-du-nombre-despèces"><span class="header-section-number">3.1</span> Estimation du nombre d’espèces</a></li>
+  <li><a href="#diversité-phylogénétique" id="toc-diversité-phylogénétique" class="nav-link" data-scroll-target="#diversité-phylogénétique"><span class="header-section-number">3.2</span> Diversité phylogénétique</a></li>
+  <li><a href="#distribution-lognormale" id="toc-distribution-lognormale" class="nav-link" data-scroll-target="#distribution-lognormale"><span class="header-section-number">3.3</span> Distribution lognormale</a></li>
+  <li><a href="#pielou-1972-1" id="toc-pielou-1972-1" class="nav-link" data-scroll-target="#pielou-1972-1"><span class="header-section-number">3.4</span> Pielou (1972)</a>
+  <ul class="collapse">
+  <li><a href="#données" id="toc-données" class="nav-link" data-scroll-target="#données"><span class="header-section-number">3.4.1</span> Données</a></li>
+  <li><a href="#diversité-des-pucerons" id="toc-diversité-des-pucerons" class="nav-link" data-scroll-target="#diversité-des-pucerons"><span class="header-section-number">3.4.2</span> Diversité des pucerons</a></li>
+  <li><a href="#largeur-de-niches" id="toc-largeur-de-niches" class="nav-link" data-scroll-target="#largeur-de-niches"><span class="header-section-number">3.4.3</span> Largeur de niches</a></li>
+  <li><a href="#chevauchement-des-niches" id="toc-chevauchement-des-niches" class="nav-link" data-scroll-target="#chevauchement-des-niches"><span class="header-section-number">3.4.4</span> Chevauchement des niches</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+<div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://github.com/EricMarcon/Exam-EFT-2026-DD"><i class="bi bi-github"></i>GitHub</a></li></ul></div></nav>
+</div>
 <main class="content" id="quarto-document-content" tabindex="-1">
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -147,7 +185,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Your name here </p>
+             <p>Eric Marcon </p>
           </div>
   </div>
     
@@ -160,10 +198,10 @@ window.Quarto = {
 </header>
 
 
-<section id="instructions" class="level1">
-<h1>Instructions</h1>
-<section id="english" class="level2">
-<h2 class="anchored" data-anchor-id="english">English</h2>
+<section id="instructions" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Instructions</h1>
+<section id="english" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="english"><span class="header-section-number">1.1</span> English</h2>
 <p>First choose your language and delete the section of the document in the other language.</p>
 <p>Answer the questions precisely but briefly: the questions are detailed to guide you so there are many of them. Don’t waste your time repeating the course: you have all documents with you, copying their content is not valuable. To answer factual questions, you don’t need to make sentences: e.g., just write “4.” to answer the question “how much are 2 + 2?”.</p>
 <p>Before you begin:</p>
@@ -175,8 +213,8 @@ window.Quarto = {
 <p>During your work: render the document regularly (at the end of each question, for example) so that problems do not pile up.</p>
 <p>At the end of the exam: save the file, make a commit and push the project to GitHub. Do not modify the project after the exam has finished.</p>
 </section>
-<section id="français" class="level2">
-<h2 class="anchored" data-anchor-id="français">Français</h2>
+<section id="français" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="français"><span class="header-section-number">1.2</span> Français</h2>
 <p>Commencez par choisir votre langue et supprimez la partie du document rédigée dans l’autre langue.</p>
 <p>Répondez aux questions de manière précise mais concise : les questions sont détaillées pour vous guider, c’est pourquoi elles sont nombreuses. Ne perdez pas votre temps à répéter le cours : vous disposez de tous les documents, il est inutile d’en recopier le contenu. Pour répondre aux questions factuelles, vous n’avez pas besoin de rédiger des phrases : par exemple, écrivez simplement “4.” pour répondre à la question “Combien font 2 + 2 ?”.</p>
 <p>Avant de commencer:</p>
@@ -189,10 +227,10 @@ window.Quarto = {
 <p>A la fin de l’examen: enregistrez le fichier, faites un commit et poussez le projet sur GitHub. Ne modifiez pas le projet après la fin de l’examen.</p>
 </section>
 </section>
-<section id="english-1" class="level1">
-<h1>English</h1>
-<section id="estimating-the-number-of-species" class="level2">
-<h2 class="anchored" data-anchor-id="estimating-the-number-of-species">Estimating the number of species</h2>
+<section id="english-1" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> English</h1>
+<section id="estimating-the-number-of-species" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="estimating-the-number-of-species"><span class="header-section-number">2.1</span> Estimating the number of species</h2>
 <p><em>You have three inventories of 10-hectare areas of forest (approximately 5,000 trees):</em></p>
 <ul>
 <li><em>A: 100 species, including 20 singletons (</em><span class="math inline">\(S_1\)</span><em>), 10 doubletons (</em><span class="math inline">\(S_2\)</span><em>) and 3 tripletons (</em><span class="math inline">\(S_3\)</span><em>),</em></li>
@@ -208,7 +246,7 @@ window.Quarto = {
 <blockquote class="blockquote">
 <p>Quickly estimate the asymptotic richness of the forest using the jackknife estimators and the rules of <span class="citation" data-cites="Brose2003">Brose et al. (<a href="#ref-Brose2003" role="doc-biblioref">2003</a>)</span>.</p>
 </blockquote>
-<p>Estimation using jackknife 1 and coverage:</p>
+<p>Estimation using jackknife 1 and coverage. The estimate is <code>S_X</code> for forest X and the coverage is <code>C_X</code>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>(S_A <span class="ot">&lt;-</span> <span class="dv">100</span> <span class="sc">+</span> <span class="dv">20</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -239,7 +277,7 @@ window.Quarto = {
 </div>
 </div>
 <p>The estimated number of species is 120 according to jackknife 1 for forest A.</p>
-<p>The coverage rate is too low for B and C: an estimate is attempted using jackknife 2:</p>
+<p>The coverage rate is too low for B and C: an estimate is attempted using jackknife 2. The coverage is now calculated with the jackknife 2 (so it decreases as the estimated number of species increases).</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># B</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>(S_B <span class="ot">&lt;-</span> <span class="dv">80</span> <span class="sc">+</span> <span class="dv">2</span> <span class="sc">*</span> <span class="dv">30</span> <span class="sc">-</span> <span class="dv">20</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -260,8 +298,8 @@ window.Quarto = {
 <pre><code>[1] 0.4411765</code></pre>
 </div>
 </div>
-<p>The estimate for forest B is 120 species according to Jackknife 2.</p>
-<p>The coverage rate for Forest C is still too low. Estimate using the Jackknife 3 method:</p>
+<p>The estimate for forest B is 120 species according to jackknife 2.</p>
+<p>The coverage rate for Forest C is still too low. Estimate using the jackknife 3.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># C</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>(<span class="at">S_C =</span> <span class="dv">150</span> <span class="sc">+</span> <span class="dv">3</span> <span class="sc">*</span> <span class="dv">110</span> <span class="sc">-</span> <span class="dv">3</span> <span class="sc">*</span> <span class="dv">30</span> <span class="sc">+</span> <span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -275,8 +313,8 @@ window.Quarto = {
 </div>
 <p>The coverage rate is still below the threshold recommended by Brose et al.&nbsp;(38 per cent), but the entire inventory is taken into account: no species has been observed more than three times (110 + 30 + 10 = 150). The inventory is clearly insufficient to estimate species richness adequately.</p>
 </section>
-<section id="phylogenetic-diversity" class="level2">
-<h2 class="anchored" data-anchor-id="phylogenetic-diversity">Phylogenetic diversity</h2>
+<section id="phylogenetic-diversity" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="phylogenetic-diversity"><span class="header-section-number">2.2</span> Phylogenetic diversity</h2>
 <p><em>The following function creates a phylogenetic tree with 3 species. The parameter <code>h</code> sets the height at which species A and B diverge.</em></p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>tree_3sp <span class="ot">&lt;-</span> <span class="cf">function</span>(h) {</span>
@@ -306,7 +344,18 @@ window.Quarto = {
 <blockquote class="blockquote">
 <p>What effect does <code>h</code> have on the value of PD?</p>
 </blockquote>
-<p>PD increases with <span class="math inline">\(h\)</span> because the double branch between A, B and their common ancestor replaces the single branch between the ancestor and the root of the tree.</p>
+<p>PD increases with <span class="math inline">\(h\)</span> because the double branch between A, B and their common ancestor replaces the single branch between the ancestor and the root of the tree. Note: <code>h</code> could just as easily be the length of the branch between the common ancestor of A and B and the root of the tree. To check this, change its value in the last line of the code block.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Small value of h</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tree_3sp</span>(<span class="fl">0.1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 <blockquote class="blockquote">
 <p>Express the value of PD in terms of <code>h</code>.</p>
 </blockquote>
@@ -320,11 +369,11 @@ window.Quarto = {
 </blockquote>
 <p>The value of <span class="math inline">\(h\)</span> describes the distance between species B and A: PD takes this into account since its value is <span class="math inline">\(2 + h\)</span>. PD therefore allows us to describe species richness without having to decide between 2 and 3 species, the extreme cases of <span class="math inline">\(h = 0\)</span> or <span class="math inline">\(h = 1\)</span>.</p>
 </section>
-<section id="lognormal-distribution" class="level2">
-<h2 class="anchored" data-anchor-id="lognormal-distribution">Lognormal distribution</h2>
+<section id="lognormal-distribution" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="lognormal-distribution"><span class="header-section-number">2.3</span> Lognormal distribution</h2>
 <p><em>We draw two random distributions from a lognormal distribution. Their size and species richness are identical; only the standard deviation of the distribution varies.</em></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">'tidyverse'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">'tidyverse'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
 ✔ dplyr     1.2.1     ✔ readr     2.2.0
@@ -337,45 +386,45 @@ window.Quarto = {
 ✖ dplyr::lag()    masks stats::lag()
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">'divent'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">'divent'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Loading required package: Rcpp</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the random seed for reproducibility</span></span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">973</span>)</span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Size and richness</span></span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>the_size <span class="ot">&lt;-</span> <span class="fl">1E6</span></span>
-<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>the_richness <span class="ot">&lt;-</span> <span class="dv">100</span></span>
-<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Draw the first community</span></span>
-<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a><span class="fu">rcommunity</span>(  <span class="dv">1</span>,</span>
-<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">size =</span> the_size,</span>
-<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">species_number =</span> the_richness,</span>
-<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">distribution =</span> <span class="st">"lnorm"</span>,</span>
-<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">sd_lnorm =</span> <span class="dv">1</span></span>
-<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
-<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Give it a name</span></span>
-<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">site =</span> <span class="st">"sigma = 1"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb30-15"><a href="#cb30-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Bind the second community data into the same tibble</span></span>
-<span id="cb30-16"><a href="#cb30-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(</span>
-<span id="cb30-17"><a href="#cb30-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Draw the second community    </span></span>
-<span id="cb30-18"><a href="#cb30-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rcommunity</span>(</span>
-<span id="cb30-19"><a href="#cb30-19" aria-hidden="true" tabindex="-1"></a>      <span class="dv">1</span>,</span>
-<span id="cb30-20"><a href="#cb30-20" aria-hidden="true" tabindex="-1"></a>      <span class="at">size =</span> the_size,</span>
-<span id="cb30-21"><a href="#cb30-21" aria-hidden="true" tabindex="-1"></a>      <span class="at">species_number =</span> the_richness,</span>
-<span id="cb30-22"><a href="#cb30-22" aria-hidden="true" tabindex="-1"></a>      <span class="at">distribution =</span> <span class="st">"lnorm"</span>,</span>
-<span id="cb30-23"><a href="#cb30-23" aria-hidden="true" tabindex="-1"></a>      <span class="at">sd_lnorm =</span> <span class="dv">2</span></span>
-<span id="cb30-24"><a href="#cb30-24" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span></span>
-<span id="cb30-25"><a href="#cb30-25" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Give it a name</span></span>
-<span id="cb30-26"><a href="#cb30-26" aria-hidden="true" tabindex="-1"></a>      <span class="fu">mutate</span>(<span class="at">site =</span> <span class="st">"sigma = 2"</span>)</span>
-<span id="cb30-27"><a href="#cb30-27" aria-hidden="true" tabindex="-1"></a>  ) <span class="ot">-&gt;</span></span>
-<span id="cb30-28"><a href="#cb30-28" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Store the result</span></span>
-<span id="cb30-29"><a href="#cb30-29" aria-hidden="true" tabindex="-1"></a>  comm_lnorm</span>
-<span id="cb30-30"><a href="#cb30-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Whittaker plot</span></span>
-<span id="cb30-31"><a href="#cb30-31" aria-hidden="true" tabindex="-1"></a><span class="fu">autoplot</span>(comm_lnorm)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the random seed for reproducibility</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">973</span>)</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Size and richness</span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>the_size <span class="ot">&lt;-</span> <span class="fl">1E6</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>the_richness <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Draw the first community</span></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="fu">rcommunity</span>(  <span class="dv">1</span>,</span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">size =</span> the_size,</span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">species_number =</span> the_richness,</span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">distribution =</span> <span class="st">"lnorm"</span>,</span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">sd_lnorm =</span> <span class="dv">1</span></span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Give it a name</span></span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">site =</span> <span class="st">"sigma = 1"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Bind the second community data into the same tibble</span></span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(</span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Draw the second community    </span></span>
+<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rcommunity</span>(</span>
+<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a>      <span class="dv">1</span>,</span>
+<span id="cb31-20"><a href="#cb31-20" aria-hidden="true" tabindex="-1"></a>      <span class="at">size =</span> the_size,</span>
+<span id="cb31-21"><a href="#cb31-21" aria-hidden="true" tabindex="-1"></a>      <span class="at">species_number =</span> the_richness,</span>
+<span id="cb31-22"><a href="#cb31-22" aria-hidden="true" tabindex="-1"></a>      <span class="at">distribution =</span> <span class="st">"lnorm"</span>,</span>
+<span id="cb31-23"><a href="#cb31-23" aria-hidden="true" tabindex="-1"></a>      <span class="at">sd_lnorm =</span> <span class="dv">2</span></span>
+<span id="cb31-24"><a href="#cb31-24" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span></span>
+<span id="cb31-25"><a href="#cb31-25" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Give it a name</span></span>
+<span id="cb31-26"><a href="#cb31-26" aria-hidden="true" tabindex="-1"></a>      <span class="fu">mutate</span>(<span class="at">site =</span> <span class="st">"sigma = 2"</span>)</span>
+<span id="cb31-27"><a href="#cb31-27" aria-hidden="true" tabindex="-1"></a>  ) <span class="ot">-&gt;</span></span>
+<span id="cb31-28"><a href="#cb31-28" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Store the result</span></span>
+<span id="cb31-29"><a href="#cb31-29" aria-hidden="true" tabindex="-1"></a>  comm_lnorm</span>
+<span id="cb31-30"><a href="#cb31-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Whittaker plot</span></span>
+<span id="cb31-31"><a href="#cb31-31" aria-hidden="true" tabindex="-1"></a><span class="fu">autoplot</span>(comm_lnorm)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -388,29 +437,29 @@ window.Quarto = {
 <p>What do we observe for a sample of reasonable size, say 6.25 ha with 600 trees per hectare? Draw the figure. Be careful not to overwrite the <code>comm_lnorm</code> variable when reusing the code.</p>
 </blockquote>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">973</span>)</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>the_size <span class="ot">&lt;-</span> <span class="fl">6.25</span> <span class="sc">*</span> <span class="dv">600</span></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rcommunity</span>(</span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span>,</span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">size =</span> the_size,</span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">species_number =</span> the_richness,</span>
-<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">distribution =</span> <span class="st">"lnorm"</span>,</span>
-<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">sd_lnorm =</span> <span class="dv">1</span></span>
-<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span>  <span class="fu">mutate</span>(<span class="at">site =</span> <span class="st">"sigma = 1"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(</span>
-<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rcommunity</span>(</span>
-<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>      <span class="dv">1</span>,</span>
-<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>      <span class="at">size =</span> the_size,</span>
-<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>      <span class="at">species_number =</span> the_richness,</span>
-<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>      <span class="at">distribution =</span> <span class="st">"lnorm"</span>,</span>
-<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>      <span class="at">sd_lnorm =</span> <span class="dv">2</span></span>
-<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span></span>
-<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a>      <span class="fu">mutate</span>(<span class="at">site =</span> <span class="st">"sigma = 2"</span>)</span>
-<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span>  <span class="fu">autoplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">973</span>)</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>the_size <span class="ot">&lt;-</span> <span class="fl">6.25</span> <span class="sc">*</span> <span class="dv">600</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rcommunity</span>(</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span>,</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">size =</span> the_size,</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">species_number =</span> the_richness,</span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">distribution =</span> <span class="st">"lnorm"</span>,</span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">sd_lnorm =</span> <span class="dv">1</span></span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span>  <span class="fu">mutate</span>(<span class="at">site =</span> <span class="st">"sigma = 1"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(</span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rcommunity</span>(</span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a>      <span class="dv">1</span>,</span>
+<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a>      <span class="at">size =</span> the_size,</span>
+<span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a>      <span class="at">species_number =</span> the_richness,</span>
+<span id="cb32-15"><a href="#cb32-15" aria-hidden="true" tabindex="-1"></a>      <span class="at">distribution =</span> <span class="st">"lnorm"</span>,</span>
+<span id="cb32-16"><a href="#cb32-16" aria-hidden="true" tabindex="-1"></a>      <span class="at">sd_lnorm =</span> <span class="dv">2</span></span>
+<span id="cb32-17"><a href="#cb32-17" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span></span>
+<span id="cb32-18"><a href="#cb32-18" aria-hidden="true" tabindex="-1"></a>      <span class="fu">mutate</span>(<span class="at">site =</span> <span class="st">"sigma = 2"</span>)</span>
+<span id="cb32-19"><a href="#cb32-19" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span>  <span class="fu">autoplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -420,12 +469,12 @@ window.Quarto = {
 <p>Plot the diversity profile of the two communities</p>
 </blockquote>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">profile_hill</span>(comm_lnorm) <span class="sc">%&gt;%</span></span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">autoplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">profile_hill</span>(comm_lnorm) <span class="sc">%&gt;%</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">autoplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -435,8 +484,8 @@ window.Quarto = {
 </blockquote>
 <p>The first one, because its probabilities exhibit lower variability: the probabilities are closer to equitability. In the second community, abundances decline very rapidly, resulting in more rare species.</p>
 </section>
-<section id="pielou-1972" class="level2">
-<h2 class="anchored" data-anchor-id="pielou-1972">Pielou (1972)</h2>
+<section id="pielou-1972" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="pielou-1972"><span class="header-section-number">2.4</span> Pielou (1972)</h2>
 <p><em>The aim of this final section is to revisit and modernise the results of <span class="citation" data-cites="pielou1972">Pielou (<a href="#ref-pielou1972" role="doc-biblioref">1972</a>)</span>. The data consist of abundance records for aphids of the genus</em> Dactynotus <em>on plants of the genus</em> Solidago <em>(Asteraceae), considered as their potential habitats. The diversity of each</em> Solidago <em>species is defined as the diversity of the aphid species it hosts.</em></p>
 <table class="caption-top table">
 <caption><em>Dactynotus pieloui</em> and <em>Solidago nemoralis</em></caption>
@@ -451,20 +500,20 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<section id="data" class="level3">
-<h3 class="anchored" data-anchor-id="data">Data</h3>
+<section id="data" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="data"><span class="header-section-number">2.4.1</span> Data</h3>
 <p><em>We will first assess the diversity of aphids in their various habitats.</em></p>
 <p><em>The data are contained in the file <code>Pielou1972.csv</code>.</em></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the file</span></span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">read_csv</span>(<span class="st">'data/Pielou1972.csv'</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Replace missing values with zeros</span></span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">everything</span>(), <span class="sc">~</span> <span class="fu">replace_na</span>(.x, <span class="dv">0</span>))) <span class="sc">%&gt;%</span></span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Create an abundances object</span></span>
-<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_abundances</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Set equal weights</span></span>
-<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">weight =</span> <span class="dv">1</span>) <span class="ot">-&gt;</span></span>
-<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>  pielou_1972</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the file</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">read_csv</span>(<span class="st">'data/Pielou1972.csv'</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Replace missing values with zeros</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">everything</span>(), <span class="sc">~</span> <span class="fu">replace_na</span>(.x, <span class="dv">0</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Create an abundances object</span></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_abundances</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Set equal weights</span></span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">weight =</span> <span class="dv">1</span>) <span class="ot">-&gt;</span></span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>  pielou_1972</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 12 Columns: 11
 ── Column specification ────────────────────────────────────────────────────────
@@ -475,8 +524,8 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Display it</span></span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>pielou_1972</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Display it</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>pielou_1972</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 12 × 12
    site           weight D_nigrotuberculatus D_nigrotibius D_caligatus D_pieloui
@@ -502,7 +551,7 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 <p>How many species of aphids are there?</p>
 </blockquote>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>(pielou_1972) <span class="sc">-</span> <span class="dv">2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>(pielou_1972) <span class="sc">-</span> <span class="dv">2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 10</code></pre>
 </div>
@@ -511,20 +560,20 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 <p>How many different plants are there?</p>
 </blockquote>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(pielou_1972)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(pielou_1972)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 12</code></pre>
 </div>
 </div>
 <p><em>Given the experimental protocol (all species studied are in the data; there are no unobserved species), diversity will always be calculated at the sample level: the argument</em> <code>estimator = "naive"</code> <em>will be used systematically.</em></p>
 </section>
-<section id="aphid-diversity" class="level3">
-<h3 class="anchored" data-anchor-id="aphid-diversity">Aphid diversity</h3>
+<section id="aphid-diversity" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="aphid-diversity"><span class="header-section-number">2.4.2</span> Aphid diversity</h3>
 <blockquote class="blockquote">
 <p>Count the number of aphid species on each plant.</p>
 </blockquote>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">div_richness</span>(pielou_1972, <span class="at">estimator =</span> <span class="st">"naive"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">div_richness</span>(pielou_1972, <span class="at">estimator =</span> <span class="st">"naive"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 12 × 5
    site           weight estimator      order diversity
@@ -551,7 +600,7 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 <p>Calculate Simpson’s diversity (not entropy).</p>
 </blockquote>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">div_hill</span>(pielou_1972, <span class="at">q =</span> <span class="dv">2</span>, <span class="at">estimator =</span> <span class="st">"naive"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">div_hill</span>(pielou_1972, <span class="at">q =</span> <span class="dv">2</span>, <span class="at">estimator =</span> <span class="st">"naive"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 12 × 5
    site           weight estimator      order diversity
@@ -578,11 +627,11 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 <p>Plot the diversity profiles of all <em>Solidago</em> species.</p>
 </blockquote>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">profile_hill</span>(pielou_1972, <span class="at">estimator =</span> <span class="st">"naive"</span>) <span class="sc">%&gt;%</span>  <span class="fu">autoplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">profile_hill</span>(pielou_1972, <span class="at">estimator =</span> <span class="st">"naive"</span>) <span class="sc">%&gt;%</span>  <span class="fu">autoplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -596,7 +645,7 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 </blockquote>
 <p><em>S. gigantea</em> is less rich but more even: its diversity profile declines less rapidly. We can compare diversity of order 5, for example:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">div_hill</span>(pielou_1972, <span class="at">q =</span> <span class="dv">5</span>, <span class="at">estimator =</span> <span class="st">"naive"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">div_hill</span>(pielou_1972, <span class="at">q =</span> <span class="dv">5</span>, <span class="at">estimator =</span> <span class="st">"naive"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 12 × 5
    site           weight estimator      order diversity
@@ -624,7 +673,7 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 <p>Partition the diversity. Summarise this partitioning in one or a few sentences.</p>
 </blockquote>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">div_part</span>(pielou_1972, <span class="at">estimator =</span> <span class="st">"naive"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">div_part</span>(pielou_1972, <span class="at">estimator =</span> <span class="st">"naive"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 15 × 6
    site           scale     estimator        order diversity weight
@@ -649,7 +698,7 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 <p>The <em>Soledago</em> metacommunity comprises 6.35 effective aphid species (diversity <span class="math inline">\(\gamma\)</span>), which can be broken down into 3.3 species per habitat (diversity <span class="math inline">\(\alpha\)</span>) multiplied by 1.91 effective habitats (diversity <span class="math inline">\(\beta\)</span>), i.e.&nbsp;with no species in common.</p>
 <p>With the asymptotic estimators (bug in divent published version), the values are:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">div_part</span>(pielou_1972)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">div_part</span>(pielou_1972)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>! Sample coverage is 0, most estimators will return `NaN`.
 ! Sample coverage is 0, most estimators will return `NaN`.</code></pre>
@@ -676,17 +725,17 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 </div>
 </div>
 </section>
-<section id="niche-width" class="level3">
-<h3 class="anchored" data-anchor-id="niche-width">Niche width</h3>
+<section id="niche-width" class="level3" data-number="2.4.3">
+<h3 data-number="2.4.3" class="anchored" data-anchor-id="niche-width"><span class="header-section-number">2.4.3</span> Niche width</h3>
 <p><em>Moving forward, we will follow Pielou’s approach by studying the diversity of habitats occupied by each aphid species. From this point onwards, you can no longer simply apply the course content; instead, you must extend the concepts you are familiar with to a new approach.</em></p>
 <p><em>Given that each</em> Solidago <em>constitutes a distinct habitat for an aphid species, the number of habitats occupied serves as a proxy for the size of its niche. A generalist aphid will occupy more habitats (in other words, have a broader niche) than a specialist aphid. The niche breadth of each aphid species is therefore initially defined by the number of different habitats it occupies.</em></p>
 <p><em>The data must be organised differently, with aphid species in rows and habitats in columns, which requires converting it to a data matrix and transposing it. As the code is rather laborious, it is provided below.</em></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the file</span></span>
-<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="fu">read_csv</span>(<span class="st">'data/Pielou1972.csv'</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Replace missing values with zeros</span></span>
-<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">everything</span>(), <span class="sc">~</span> <span class="fu">replace_na</span>(.x, <span class="dv">0</span>))) <span class="ot">-&gt;</span></span>
-<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>  pielou_raw</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the file</span></span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="fu">read_csv</span>(<span class="st">'data/Pielou1972.csv'</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Replace missing values with zeros</span></span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">everything</span>(), <span class="sc">~</span> <span class="fu">replace_na</span>(.x, <span class="dv">0</span>))) <span class="ot">-&gt;</span></span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>  pielou_raw</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 12 Columns: 11
 ── Column specification ────────────────────────────────────────────────────────
@@ -697,29 +746,29 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the names of the Soledagos</span></span>
-<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>pielou_raw <span class="sc">%&gt;%</span></span>
-<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(site) <span class="ot">-&gt;</span></span>
-<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>  pielou_habitats</span>
-<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a matrix</span></span>
-<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a>pielou_raw <span class="sc">%&gt;%</span></span>
-<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Remove the 'site' column</span></span>
-<span id="cb55-8"><a href="#cb55-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>site) <span class="sc">%&gt;%</span></span>
-<span id="cb55-9"><a href="#cb55-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Convert to a matrix</span></span>
-<span id="cb55-10"><a href="#cb55-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.matrix</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb55-11"><a href="#cb55-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Transpose the matrix</span></span>
-<span id="cb55-12"><a href="#cb55-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">t</span>() <span class="ot">-&gt;</span></span>
-<span id="cb55-13"><a href="#cb55-13" aria-hidden="true" tabindex="-1"></a>  pielou_niches.matrix</span>
-<span id="cb55-14"><a href="#cb55-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Add the column names</span></span>
-<span id="cb55-15"><a href="#cb55-15" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(pielou_niches.matrix) <span class="ot">&lt;-</span> pielou_habitats</span>
-<span id="cb55-16"><a href="#cb55-16" aria-hidden="true" tabindex="-1"></a>pielou_niches.matrix <span class="sc">%&gt;%</span></span>
-<span id="cb55-17"><a href="#cb55-17" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Create an abundances object</span></span>
-<span id="cb55-18"><a href="#cb55-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_abundances</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb55-19"><a href="#cb55-19" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Set equal weights</span></span>
-<span id="cb55-20"><a href="#cb55-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">weight =</span> <span class="dv">1</span>) <span class="ot">-&gt;</span></span>
-<span id="cb55-21"><a href="#cb55-21" aria-hidden="true" tabindex="-1"></a>  pielou_niches</span>
-<span id="cb55-22"><a href="#cb55-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Display it</span></span>
-<span id="cb55-23"><a href="#cb55-23" aria-hidden="true" tabindex="-1"></a>pielou_niches</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the names of the Soledagos</span></span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>pielou_raw <span class="sc">%&gt;%</span></span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(site) <span class="ot">-&gt;</span></span>
+<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>  pielou_habitats</span>
+<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a matrix</span></span>
+<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a>pielou_raw <span class="sc">%&gt;%</span></span>
+<span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Remove the 'site' column</span></span>
+<span id="cb56-8"><a href="#cb56-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>site) <span class="sc">%&gt;%</span></span>
+<span id="cb56-9"><a href="#cb56-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Convert to a matrix</span></span>
+<span id="cb56-10"><a href="#cb56-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.matrix</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb56-11"><a href="#cb56-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Transpose the matrix</span></span>
+<span id="cb56-12"><a href="#cb56-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">t</span>() <span class="ot">-&gt;</span></span>
+<span id="cb56-13"><a href="#cb56-13" aria-hidden="true" tabindex="-1"></a>  pielou_niches.matrix</span>
+<span id="cb56-14"><a href="#cb56-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Add the column names</span></span>
+<span id="cb56-15"><a href="#cb56-15" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(pielou_niches.matrix) <span class="ot">&lt;-</span> pielou_habitats</span>
+<span id="cb56-16"><a href="#cb56-16" aria-hidden="true" tabindex="-1"></a>pielou_niches.matrix <span class="sc">%&gt;%</span></span>
+<span id="cb56-17"><a href="#cb56-17" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Create an abundances object</span></span>
+<span id="cb56-18"><a href="#cb56-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_abundances</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb56-19"><a href="#cb56-19" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Set equal weights</span></span>
+<span id="cb56-20"><a href="#cb56-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">weight =</span> <span class="dv">1</span>) <span class="ot">-&gt;</span></span>
+<span id="cb56-21"><a href="#cb56-21" aria-hidden="true" tabindex="-1"></a>  pielou_niches</span>
+<span id="cb56-22"><a href="#cb56-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Display it</span></span>
+<span id="cb56-23"><a href="#cb56-23" aria-hidden="true" tabindex="-1"></a>pielou_niches</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 14
    site   weight S_canadensis S_nemoralis S_rugosa S_juncea S_gigantea S_hispida
@@ -740,7 +789,7 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 </div>
 <p><em>The number of habitats occupied by each aphid species can be counted using the usual diversity calculation functions, applied to this unusual dataset:</em></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">div_richness</span>(pielou_niches, <span class="at">estimator =</span> <span class="st">"naive"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">div_richness</span>(pielou_niches, <span class="at">estimator =</span> <span class="st">"naive"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 5
    site                weight estimator      order diversity
@@ -770,12 +819,12 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 <p>Plot the aphid diversity profiles and establish the link between the actual number of <em>Soledago</em> plants and niche width.</p>
 </blockquote>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">profile_hill</span>(pielou_niches, <span class="at">estimator =</span> <span class="st">"naive"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">autoplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">profile_hill</span>(pielou_niches, <span class="at">estimator =</span> <span class="st">"naive"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">autoplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -786,8 +835,8 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 </blockquote>
 <p>Shannon’s entropy and Simpson’s diversity. Simpson’s diversity is shown in the diversity profile above.</p>
 </section>
-<section id="niche-overlap" class="level3">
-<h3 class="anchored" data-anchor-id="niche-overlap">Niche overlap</h3>
+<section id="niche-overlap" class="level3" data-number="2.4.4">
+<h3 data-number="2.4.4" class="anchored" data-anchor-id="niche-overlap"><span class="header-section-number">2.4.4</span> Niche overlap</h3>
 <p><em>Pielou wants to assess niche overlap in addition to niche width. The reasoning is clearer using Hill’s numbers. If the niches do not overlap at all, there is only one species per habitat, provided, of course, that there are fewer species than habitats. Conversely, if all species are completely generalist, the number of species per habitat equals the total number of species.</em></p>
 <blockquote class="blockquote">
 <p>What measure reflects niche overlap? Give its value for <span class="math inline">\(q = 1\)</span>.</p>
@@ -796,10 +845,10 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 </section>
 </section>
 </section>
-<section id="français-1" class="level1">
-<h1>Français</h1>
-<section id="estimation-du-nombre-despèces" class="level2">
-<h2 class="anchored" data-anchor-id="estimation-du-nombre-despèces">Estimation du nombre d’espèces</h2>
+<section id="français-1" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Français</h1>
+<section id="estimation-du-nombre-despèces" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="estimation-du-nombre-despèces"><span class="header-section-number">3.1</span> Estimation du nombre d’espèces</h2>
 <p><em>Vous disposez de trois inventaires de 10 hectares de forêt (environ 5000 arbres) :</em></p>
 <ul>
 <li><em>A : 100 espèces dont 20 singletons (</em><span class="math inline">\(S_1\)</span>), 10 doubletons (<span class="math inline">\(S_2\)</span>) et 3 tripletons (<span class="math inline">\(S_3\)</span>),</li>
@@ -817,52 +866,52 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 </blockquote>
 <p>Estimation avec le jackknife 1 et couverture :</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A</span></span>
-<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>(S_A <span class="ot">&lt;-</span> <span class="dv">100</span> <span class="sc">+</span> <span class="dv">20</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A</span></span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>(S_A <span class="ot">&lt;-</span> <span class="dv">100</span> <span class="sc">+</span> <span class="dv">20</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 120</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>(C_A <span class="ot">&lt;-</span> <span class="dv">100</span> <span class="sc">/</span> S_A)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>(C_A <span class="ot">&lt;-</span> <span class="dv">100</span> <span class="sc">/</span> S_A)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.8333333</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="co"># B</span></span>
-<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>(S_B <span class="ot">&lt;-</span> <span class="dv">80</span> <span class="sc">+</span> <span class="dv">30</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="co"># B</span></span>
+<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>(S_B <span class="ot">&lt;-</span> <span class="dv">80</span> <span class="sc">+</span> <span class="dv">30</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 110</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>(C_B <span class="ot">&lt;-</span> <span class="dv">80</span> <span class="sc">/</span> S_B)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>(C_B <span class="ot">&lt;-</span> <span class="dv">80</span> <span class="sc">/</span> S_B)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.7272727</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="co"># C</span></span>
-<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a>(S_C <span class="ot">&lt;-</span> <span class="dv">150</span> <span class="sc">+</span> <span class="dv">110</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="co"># C</span></span>
+<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a>(S_C <span class="ot">&lt;-</span> <span class="dv">150</span> <span class="sc">+</span> <span class="dv">110</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 260</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>(C_C <span class="ot">&lt;-</span> <span class="dv">150</span> <span class="sc">/</span> S_C)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>(C_C <span class="ot">&lt;-</span> <span class="dv">150</span> <span class="sc">/</span> S_C)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.5769231</code></pre>
 </div>
 </div>
 <p>Le nombre d’espèce estimé est 120 selon le jackknife 1 pour la forêt A.</p>
-<p>Le taux de couverture est trop faible pour B et C : l’estimation est tenté avec le jackknife 2 :</p>
+<p>Le taux de couverture est trop faible pour B et C : l’estimation est tentée avec le jackknife 2. Le taux de couverture est aussi calculé avec le jackknife 2: il diminue alors que le nombre d’espèces estimé augmente.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="co"># B</span></span>
-<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>(S_B <span class="ot">&lt;-</span> <span class="dv">80</span> <span class="sc">+</span> <span class="dv">2</span> <span class="sc">*</span> <span class="dv">30</span> <span class="sc">-</span> <span class="dv">20</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="co"># B</span></span>
+<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a>(S_B <span class="ot">&lt;-</span> <span class="dv">80</span> <span class="sc">+</span> <span class="dv">2</span> <span class="sc">*</span> <span class="dv">30</span> <span class="sc">-</span> <span class="dv">20</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 120</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>(C_B <span class="ot">&lt;-</span> <span class="dv">80</span> <span class="sc">/</span> S_B)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb75"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a>(C_B <span class="ot">&lt;-</span> <span class="dv">80</span> <span class="sc">/</span> S_B)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.6666667</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="co"># C</span></span>
-<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a>(S_C <span class="ot">&lt;-</span> <span class="dv">150</span> <span class="sc">+</span> <span class="dv">2</span> <span class="sc">*</span> <span class="dv">110</span> <span class="sc">-</span> <span class="dv">30</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb77"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="co"># C</span></span>
+<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a>(S_C <span class="ot">&lt;-</span> <span class="dv">150</span> <span class="sc">+</span> <span class="dv">2</span> <span class="sc">*</span> <span class="dv">110</span> <span class="sc">-</span> <span class="dv">30</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 340</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a>(C_C <span class="ot">&lt;-</span> <span class="dv">150</span> <span class="sc">/</span> S_C)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>(C_C <span class="ot">&lt;-</span> <span class="dv">150</span> <span class="sc">/</span> S_C)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.4411765</code></pre>
 </div>
@@ -870,34 +919,34 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 <p>L’estimation de la forêt B est 120 espèces selon le jackknife 2.</p>
 <p>Le taux de couverture de la forêt C est encore trop faible. Estimation avec le Jackknife 3:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="co"># C</span></span>
-<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a>(<span class="at">S_C =</span> <span class="dv">150</span> <span class="sc">+</span> <span class="dv">3</span> <span class="sc">*</span> <span class="dv">110</span> <span class="sc">-</span> <span class="dv">3</span> <span class="sc">*</span> <span class="dv">30</span> <span class="sc">+</span> <span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="co"># C</span></span>
+<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a>(<span class="at">S_C =</span> <span class="dv">150</span> <span class="sc">+</span> <span class="dv">3</span> <span class="sc">*</span> <span class="dv">110</span> <span class="sc">-</span> <span class="dv">3</span> <span class="sc">*</span> <span class="dv">30</span> <span class="sc">+</span> <span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 400</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a>(C_C <span class="ot">&lt;-</span> <span class="dv">150</span> <span class="sc">/</span> S_C)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb83"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a>(C_C <span class="ot">&lt;-</span> <span class="dv">150</span> <span class="sc">/</span> S_C)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.375</code></pre>
 </div>
 </div>
 <p>Le taux de couverture est encore inférieur à la limite conseillée par Brose et al.&nbsp;(38%) mais tout l’inventaire est pris en compte : il n’y a pas d’espèces observées plus de 3 fois (110 + 30 + 10 = 150). L’inventaire est clairement insuffisant pour estimer la richesse convenablement.</p>
 </section>
-<section id="diversité-phylogénétique" class="level2">
-<h2 class="anchored" data-anchor-id="diversité-phylogénétique">Diversité phylogénétique</h2>
+<section id="diversité-phylogénétique" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="diversité-phylogénétique"><span class="header-section-number">3.2</span> Diversité phylogénétique</h2>
 <p><em>La fonction suivante permet de créer un arbre phylogénétique avec 3 espèces. Le paramètre <code>h</code> fixe la hauteur à laquelle les espèces A et B se séparent.</em></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a>tree_3sp <span class="ot">&lt;-</span> <span class="cf">function</span>(h) {</span>
-<span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a>  NewickABC <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"(C:1,(A:"</span>, <span class="dv">1</span> <span class="sc">-</span> h, <span class="st">",B:"</span>, <span class="dv">1</span> <span class="sc">-</span> h, <span class="st">"):"</span>, h, <span class="st">");"</span>)</span>
-<span id="cb84-3"><a href="#cb84-3" aria-hidden="true" tabindex="-1"></a>  phyloABC <span class="ot">&lt;-</span> ape<span class="sc">::</span><span class="fu">read.tree</span>(<span class="at">text =</span> NewickABC)</span>
-<span id="cb84-4"><a href="#cb84-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(phyloABC, <span class="at">direction =</span> <span class="st">"downwards"</span>, <span class="at">srt =</span> <span class="dv">90</span>)</span>
-<span id="cb84-5"><a href="#cb84-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">axis</span>(<span class="dv">2</span>)</span>
-<span id="cb84-6"><a href="#cb84-6" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb84-7"><a href="#cb84-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Make a tree</span></span>
-<span id="cb84-8"><a href="#cb84-8" aria-hidden="true" tabindex="-1"></a><span class="fu">tree_3sp</span>(<span class="fl">0.5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb85"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a>tree_3sp <span class="ot">&lt;-</span> <span class="cf">function</span>(h) {</span>
+<span id="cb85-2"><a href="#cb85-2" aria-hidden="true" tabindex="-1"></a>  NewickABC <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"(C:1,(A:"</span>, <span class="dv">1</span> <span class="sc">-</span> h, <span class="st">",B:"</span>, <span class="dv">1</span> <span class="sc">-</span> h, <span class="st">"):"</span>, h, <span class="st">");"</span>)</span>
+<span id="cb85-3"><a href="#cb85-3" aria-hidden="true" tabindex="-1"></a>  phyloABC <span class="ot">&lt;-</span> ape<span class="sc">::</span><span class="fu">read.tree</span>(<span class="at">text =</span> NewickABC)</span>
+<span id="cb85-4"><a href="#cb85-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(phyloABC, <span class="at">direction =</span> <span class="st">"downwards"</span>, <span class="at">srt =</span> <span class="dv">90</span>)</span>
+<span id="cb85-5"><a href="#cb85-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">axis</span>(<span class="dv">2</span>)</span>
+<span id="cb85-6"><a href="#cb85-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb85-7"><a href="#cb85-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Make a tree</span></span>
+<span id="cb85-8"><a href="#cb85-8" aria-hidden="true" tabindex="-1"></a><span class="fu">tree_3sp</span>(<span class="fl">0.5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -913,7 +962,18 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 <blockquote class="blockquote">
 <p>Quel est l’effet de <code>h</code> sur la valeur de PD ?</p>
 </blockquote>
-<p>PD augmente avec <span class="math inline">\(h\)</span> parce que la double branche entre A, B et leur ancêtre commune remplace branche simple entre l’ancêtre et la racine de l’arbre.</p>
+<p>PD augmente avec <span class="math inline">\(h\)</span> parce que la double branche entre A, B et leur ancêtre commune remplace branche simple entre l’ancêtre et la racine de l’arbre. Remarque: <code>h</code> pourrait aussi bien être la longueur de la branche entre l’ancêtre de A et B et la racine de l’arbre. Pour vérifier, il faut changer sa valeur dans la dernière ligne du bloc de code.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Small value of h</span></span>
+<span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tree_3sp</span>(<span class="fl">0.1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 <blockquote class="blockquote">
 <p>Ecrivez la valeur de PD en fonction de `h`.</p>
 </blockquote>
@@ -927,48 +987,48 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 </blockquote>
 <p>La valeur de <span class="math inline">\(h\)</span> décrit la distance entre les espèces B et A : PD la prend en compte puisque sa valeur est <span class="math inline">\(2 + h\)</span>. PD permet donc de décrire la richesse sans trancher entre 2 et 3 espèces, cas extrêmes de <span class="math inline">\(h = 0\)</span> ou <span class="math inline">\(h = 1\)</span>.</p>
 </section>
-<section id="distribution-lognormale" class="level2">
-<h2 class="anchored" data-anchor-id="distribution-lognormale">Distribution lognormale</h2>
+<section id="distribution-lognormale" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="distribution-lognormale"><span class="header-section-number">3.3</span> Distribution lognormale</h2>
 <p><em>On tire deux distributions aléatoires dans une loi lognormale. Leur taille et leur richesse sont identiques, seul l’écart-type de la distribution varie.</em></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb85"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"tidyverse"</span>)</span>
-<span id="cb85-2"><a href="#cb85-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"divent"</span>)</span>
-<span id="cb85-3"><a href="#cb85-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the random seed for reproducibility</span></span>
-<span id="cb85-4"><a href="#cb85-4" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">973</span>)</span>
-<span id="cb85-5"><a href="#cb85-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Size and richness</span></span>
-<span id="cb85-6"><a href="#cb85-6" aria-hidden="true" tabindex="-1"></a>the_size <span class="ot">&lt;-</span> <span class="fl">1E6</span></span>
-<span id="cb85-7"><a href="#cb85-7" aria-hidden="true" tabindex="-1"></a>the_richness <span class="ot">&lt;-</span> <span class="dv">100</span></span>
-<span id="cb85-8"><a href="#cb85-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Draw the first community</span></span>
-<span id="cb85-9"><a href="#cb85-9" aria-hidden="true" tabindex="-1"></a><span class="fu">rcommunity</span>(</span>
-<span id="cb85-10"><a href="#cb85-10" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span>, </span>
-<span id="cb85-11"><a href="#cb85-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">size =</span> the_size, </span>
-<span id="cb85-12"><a href="#cb85-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">species_number =</span> the_richness, </span>
-<span id="cb85-13"><a href="#cb85-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">distribution =</span> <span class="st">"lnorm"</span>, </span>
-<span id="cb85-14"><a href="#cb85-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">sd_lnorm =</span> <span class="dv">1</span></span>
-<span id="cb85-15"><a href="#cb85-15" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> </span>
-<span id="cb85-16"><a href="#cb85-16" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Give it a name</span></span>
-<span id="cb85-17"><a href="#cb85-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">site =</span> <span class="st">"sigma = 1"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb85-18"><a href="#cb85-18" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Bind the second community data in the same tibble</span></span>
-<span id="cb85-19"><a href="#cb85-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(</span>
-<span id="cb85-20"><a href="#cb85-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Draw the second community</span></span>
-<span id="cb85-21"><a href="#cb85-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rcommunity</span>(</span>
-<span id="cb85-22"><a href="#cb85-22" aria-hidden="true" tabindex="-1"></a>      <span class="dv">1</span>, </span>
-<span id="cb85-23"><a href="#cb85-23" aria-hidden="true" tabindex="-1"></a>      <span class="at">size =</span> the_size, </span>
-<span id="cb85-24"><a href="#cb85-24" aria-hidden="true" tabindex="-1"></a>      <span class="at">species_number =</span> the_richness, </span>
-<span id="cb85-25"><a href="#cb85-25" aria-hidden="true" tabindex="-1"></a>      <span class="at">distribution =</span> <span class="st">"lnorm"</span>, </span>
-<span id="cb85-26"><a href="#cb85-26" aria-hidden="true" tabindex="-1"></a>      <span class="at">sd_lnorm =</span> <span class="dv">2</span></span>
-<span id="cb85-27"><a href="#cb85-27" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span> </span>
-<span id="cb85-28"><a href="#cb85-28" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Give it a name</span></span>
-<span id="cb85-29"><a href="#cb85-29" aria-hidden="true" tabindex="-1"></a>      <span class="fu">mutate</span>(<span class="at">site =</span> <span class="st">"sigma = 2"</span>)</span>
-<span id="cb85-30"><a href="#cb85-30" aria-hidden="true" tabindex="-1"></a>  ) <span class="ot">-&gt;</span> </span>
-<span id="cb85-31"><a href="#cb85-31" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Store the result</span></span>
-<span id="cb85-32"><a href="#cb85-32" aria-hidden="true" tabindex="-1"></a>  comm_lnorm</span>
-<span id="cb85-33"><a href="#cb85-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Whittaker plot</span></span>
-<span id="cb85-34"><a href="#cb85-34" aria-hidden="true" tabindex="-1"></a><span class="fu">autoplot</span>(comm_lnorm)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb87"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"tidyverse"</span>)</span>
+<span id="cb87-2"><a href="#cb87-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"divent"</span>)</span>
+<span id="cb87-3"><a href="#cb87-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the random seed for reproducibility</span></span>
+<span id="cb87-4"><a href="#cb87-4" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">973</span>)</span>
+<span id="cb87-5"><a href="#cb87-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Size and richness</span></span>
+<span id="cb87-6"><a href="#cb87-6" aria-hidden="true" tabindex="-1"></a>the_size <span class="ot">&lt;-</span> <span class="fl">1E6</span></span>
+<span id="cb87-7"><a href="#cb87-7" aria-hidden="true" tabindex="-1"></a>the_richness <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb87-8"><a href="#cb87-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Draw the first community</span></span>
+<span id="cb87-9"><a href="#cb87-9" aria-hidden="true" tabindex="-1"></a><span class="fu">rcommunity</span>(</span>
+<span id="cb87-10"><a href="#cb87-10" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span>, </span>
+<span id="cb87-11"><a href="#cb87-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">size =</span> the_size, </span>
+<span id="cb87-12"><a href="#cb87-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">species_number =</span> the_richness, </span>
+<span id="cb87-13"><a href="#cb87-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">distribution =</span> <span class="st">"lnorm"</span>, </span>
+<span id="cb87-14"><a href="#cb87-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">sd_lnorm =</span> <span class="dv">1</span></span>
+<span id="cb87-15"><a href="#cb87-15" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> </span>
+<span id="cb87-16"><a href="#cb87-16" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Give it a name</span></span>
+<span id="cb87-17"><a href="#cb87-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">site =</span> <span class="st">"sigma = 1"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb87-18"><a href="#cb87-18" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Bind the second community data in the same tibble</span></span>
+<span id="cb87-19"><a href="#cb87-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(</span>
+<span id="cb87-20"><a href="#cb87-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Draw the second community</span></span>
+<span id="cb87-21"><a href="#cb87-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rcommunity</span>(</span>
+<span id="cb87-22"><a href="#cb87-22" aria-hidden="true" tabindex="-1"></a>      <span class="dv">1</span>, </span>
+<span id="cb87-23"><a href="#cb87-23" aria-hidden="true" tabindex="-1"></a>      <span class="at">size =</span> the_size, </span>
+<span id="cb87-24"><a href="#cb87-24" aria-hidden="true" tabindex="-1"></a>      <span class="at">species_number =</span> the_richness, </span>
+<span id="cb87-25"><a href="#cb87-25" aria-hidden="true" tabindex="-1"></a>      <span class="at">distribution =</span> <span class="st">"lnorm"</span>, </span>
+<span id="cb87-26"><a href="#cb87-26" aria-hidden="true" tabindex="-1"></a>      <span class="at">sd_lnorm =</span> <span class="dv">2</span></span>
+<span id="cb87-27"><a href="#cb87-27" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span> </span>
+<span id="cb87-28"><a href="#cb87-28" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Give it a name</span></span>
+<span id="cb87-29"><a href="#cb87-29" aria-hidden="true" tabindex="-1"></a>      <span class="fu">mutate</span>(<span class="at">site =</span> <span class="st">"sigma = 2"</span>)</span>
+<span id="cb87-30"><a href="#cb87-30" aria-hidden="true" tabindex="-1"></a>  ) <span class="ot">-&gt;</span> </span>
+<span id="cb87-31"><a href="#cb87-31" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Store the result</span></span>
+<span id="cb87-32"><a href="#cb87-32" aria-hidden="true" tabindex="-1"></a>  comm_lnorm</span>
+<span id="cb87-33"><a href="#cb87-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Whittaker plot</span></span>
+<span id="cb87-34"><a href="#cb87-34" aria-hidden="true" tabindex="-1"></a><span class="fu">autoplot</span>(comm_lnorm)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -981,31 +1041,31 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 <p>Qu’observe-t-on pour un échantillon de taille raisonnable, disons 6,25ha avec 600 arbres / ha ? Faites la figure. Attention à ne pas détruire la variable <code>comm_lnorm</code> en réutilisant le code.</p>
 </blockquote>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">973</span>)</span>
-<span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a>the_size <span class="ot">&lt;-</span> <span class="fl">6.25</span> <span class="sc">*</span> <span class="dv">600</span></span>
-<span id="cb86-3"><a href="#cb86-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rcommunity</span>(</span>
-<span id="cb86-4"><a href="#cb86-4" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span>, </span>
-<span id="cb86-5"><a href="#cb86-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">size =</span> the_size, </span>
-<span id="cb86-6"><a href="#cb86-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">species_number =</span> the_richness, </span>
-<span id="cb86-7"><a href="#cb86-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">distribution =</span> <span class="st">"lnorm"</span>, </span>
-<span id="cb86-8"><a href="#cb86-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">sd_lnorm =</span> <span class="dv">1</span></span>
-<span id="cb86-9"><a href="#cb86-9" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> </span>
-<span id="cb86-10"><a href="#cb86-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">site =</span> <span class="st">"sigma = 1"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb86-11"><a href="#cb86-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(</span>
-<span id="cb86-12"><a href="#cb86-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rcommunity</span>(</span>
-<span id="cb86-13"><a href="#cb86-13" aria-hidden="true" tabindex="-1"></a>      <span class="dv">1</span>, </span>
-<span id="cb86-14"><a href="#cb86-14" aria-hidden="true" tabindex="-1"></a>      <span class="at">size =</span> the_size, </span>
-<span id="cb86-15"><a href="#cb86-15" aria-hidden="true" tabindex="-1"></a>      <span class="at">species_number =</span> the_richness, </span>
-<span id="cb86-16"><a href="#cb86-16" aria-hidden="true" tabindex="-1"></a>      <span class="at">distribution =</span> <span class="st">"lnorm"</span>, </span>
-<span id="cb86-17"><a href="#cb86-17" aria-hidden="true" tabindex="-1"></a>      <span class="at">sd_lnorm =</span> <span class="dv">2</span></span>
-<span id="cb86-18"><a href="#cb86-18" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span> </span>
-<span id="cb86-19"><a href="#cb86-19" aria-hidden="true" tabindex="-1"></a>      <span class="fu">mutate</span>(<span class="at">site =</span> <span class="st">"sigma = 2"</span>)</span>
-<span id="cb86-20"><a href="#cb86-20" aria-hidden="true" tabindex="-1"></a>  )  <span class="sc">%&gt;%</span> </span>
-<span id="cb86-21"><a href="#cb86-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">autoplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">973</span>)</span>
+<span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a>the_size <span class="ot">&lt;-</span> <span class="fl">6.25</span> <span class="sc">*</span> <span class="dv">600</span></span>
+<span id="cb88-3"><a href="#cb88-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rcommunity</span>(</span>
+<span id="cb88-4"><a href="#cb88-4" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span>, </span>
+<span id="cb88-5"><a href="#cb88-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">size =</span> the_size, </span>
+<span id="cb88-6"><a href="#cb88-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">species_number =</span> the_richness, </span>
+<span id="cb88-7"><a href="#cb88-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">distribution =</span> <span class="st">"lnorm"</span>, </span>
+<span id="cb88-8"><a href="#cb88-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">sd_lnorm =</span> <span class="dv">1</span></span>
+<span id="cb88-9"><a href="#cb88-9" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> </span>
+<span id="cb88-10"><a href="#cb88-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">site =</span> <span class="st">"sigma = 1"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb88-11"><a href="#cb88-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(</span>
+<span id="cb88-12"><a href="#cb88-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rcommunity</span>(</span>
+<span id="cb88-13"><a href="#cb88-13" aria-hidden="true" tabindex="-1"></a>      <span class="dv">1</span>, </span>
+<span id="cb88-14"><a href="#cb88-14" aria-hidden="true" tabindex="-1"></a>      <span class="at">size =</span> the_size, </span>
+<span id="cb88-15"><a href="#cb88-15" aria-hidden="true" tabindex="-1"></a>      <span class="at">species_number =</span> the_richness, </span>
+<span id="cb88-16"><a href="#cb88-16" aria-hidden="true" tabindex="-1"></a>      <span class="at">distribution =</span> <span class="st">"lnorm"</span>, </span>
+<span id="cb88-17"><a href="#cb88-17" aria-hidden="true" tabindex="-1"></a>      <span class="at">sd_lnorm =</span> <span class="dv">2</span></span>
+<span id="cb88-18"><a href="#cb88-18" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span> </span>
+<span id="cb88-19"><a href="#cb88-19" aria-hidden="true" tabindex="-1"></a>      <span class="fu">mutate</span>(<span class="at">site =</span> <span class="st">"sigma = 2"</span>)</span>
+<span id="cb88-20"><a href="#cb88-20" aria-hidden="true" tabindex="-1"></a>  )  <span class="sc">%&gt;%</span> </span>
+<span id="cb88-21"><a href="#cb88-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">autoplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1015,12 +1075,12 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 <p>Tracez le profil de diversité des deux communautés</p>
 </blockquote>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb87"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">profile_hill</span>(comm_lnorm) <span class="sc">%&gt;%</span> </span>
-<span id="cb87-2"><a href="#cb87-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">autoplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb89"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="fu">profile_hill</span>(comm_lnorm) <span class="sc">%&gt;%</span> </span>
+<span id="cb89-2"><a href="#cb89-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">autoplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1030,8 +1090,8 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 </blockquote>
 <p>La première parce que ses probabilités ont une variabilité plus faible : les probabilités sont plus proches de l’équitabilité. Dans la deuxième communauté, les abondances décroissent très rapidement, donnant lieu à plus d’espèces rares.</p>
 </section>
-<section id="pielou-1972-1" class="level2">
-<h2 class="anchored" data-anchor-id="pielou-1972-1">Pielou (1972)</h2>
+<section id="pielou-1972-1" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="pielou-1972-1"><span class="header-section-number">3.4</span> Pielou (1972)</h2>
 <p><em>L’objectif de cette dernière partie est de redécouvrir et de moderniser les résultats de <span class="citation" data-cites="pielou1972">Pielou (<a href="#ref-pielou1972" role="doc-biblioref">1972</a>)</span>. Les données sont des relevés d’abondances de pucerons du genre</em> Dactynotus <em>sur des plantes du genre</em> Solidago <em>(Asteraceae), considérées comme leurs habitats possibles. La diversité de chacun des</em> Solidago <em>est celle des espèces de pucerons qu’il abrite.</em></p>
 <table class="caption-top table">
 <caption><em>Dactynotus pieloui</em> et <em>Solidago nemoralis</em></caption>
@@ -1046,20 +1106,20 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 </tr>
 </tbody>
 </table>
-<section id="données" class="level3">
-<h3 class="anchored" data-anchor-id="données">Données</h3>
+<section id="données" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="données"><span class="header-section-number">3.4.1</span> Données</h3>
 <p><em>Nous allons d’abord évaluer la diversité des pucerons dans leurs différents habitats.</em></p>
 <p><em>Les données sont dans le fichier <code>Pielou1972.csv</code>.</em></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the file</span></span>
-<span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a><span class="fu">read_csv</span>(<span class="st">"data/Pielou1972.csv"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb88-3"><a href="#cb88-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Replace missing values by zeros</span></span>
-<span id="cb88-4"><a href="#cb88-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">everything</span>(), <span class="sc">~</span> <span class="fu">replace_na</span>(.x, <span class="dv">0</span>))) <span class="sc">%&gt;%</span> </span>
-<span id="cb88-5"><a href="#cb88-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Make an abundances object</span></span>
-<span id="cb88-6"><a href="#cb88-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_abundances</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb88-7"><a href="#cb88-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Set equal weights</span></span>
-<span id="cb88-8"><a href="#cb88-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">weight =</span> <span class="dv">1</span>) <span class="ot">-&gt;</span> </span>
-<span id="cb88-9"><a href="#cb88-9" aria-hidden="true" tabindex="-1"></a>  pielou_1972</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the file</span></span>
+<span id="cb90-2"><a href="#cb90-2" aria-hidden="true" tabindex="-1"></a><span class="fu">read_csv</span>(<span class="st">"data/Pielou1972.csv"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb90-3"><a href="#cb90-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Replace missing values by zeros</span></span>
+<span id="cb90-4"><a href="#cb90-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">everything</span>(), <span class="sc">~</span> <span class="fu">replace_na</span>(.x, <span class="dv">0</span>))) <span class="sc">%&gt;%</span> </span>
+<span id="cb90-5"><a href="#cb90-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Make an abundances object</span></span>
+<span id="cb90-6"><a href="#cb90-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_abundances</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb90-7"><a href="#cb90-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Set equal weights</span></span>
+<span id="cb90-8"><a href="#cb90-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">weight =</span> <span class="dv">1</span>) <span class="ot">-&gt;</span> </span>
+<span id="cb90-9"><a href="#cb90-9" aria-hidden="true" tabindex="-1"></a>  pielou_1972</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 12 Columns: 11
 ── Column specification ────────────────────────────────────────────────────────
@@ -1070,8 +1130,8 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Show it</span></span>
-<span id="cb90-2"><a href="#cb90-2" aria-hidden="true" tabindex="-1"></a>pielou_1972</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb92"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Show it</span></span>
+<span id="cb92-2"><a href="#cb92-2" aria-hidden="true" tabindex="-1"></a>pielou_1972</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 12 × 12
    site           weight D_nigrotuberculatus D_nigrotibius D_caligatus D_pieloui
@@ -1097,7 +1157,7 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 <p>Combien y a–t-il d’espèces de pucerons ?</p>
 </blockquote>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb92"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>(pielou_1972) <span class="sc">-</span> <span class="dv">2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb94"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>(pielou_1972) <span class="sc">-</span> <span class="dv">2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 10</code></pre>
 </div>
@@ -1106,20 +1166,20 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 <p>Combien y a–t-il de plantes différentes ?</p>
 </blockquote>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb94"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(pielou_1972)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb96"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(pielou_1972)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 12</code></pre>
 </div>
 </div>
 <p><em>Etant donné le protocole expérimental (toutes les espèces étudiées sont dans les données, il n’y a pas d’espèce non observée), la diversité sera toujours calculée au niveau de l’échantillon: l’argument</em> <code>estimator = "naive"</code> <em>sera utilisé systématiquement.</em></p>
 </section>
-<section id="diversité-des-pucerons" class="level3">
-<h3 class="anchored" data-anchor-id="diversité-des-pucerons">Diversité des pucerons</h3>
+<section id="diversité-des-pucerons" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="diversité-des-pucerons"><span class="header-section-number">3.4.2</span> Diversité des pucerons</h3>
 <blockquote class="blockquote">
 <p>Compter le nombre d’espèces de pucerons sur chaque plante.</p>
 </blockquote>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb96"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="fu">div_richness</span>(pielou_1972, <span class="at">estimator =</span> <span class="st">"naive"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb98"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="fu">div_richness</span>(pielou_1972, <span class="at">estimator =</span> <span class="st">"naive"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 12 × 5
    site           weight estimator      order diversity
@@ -1146,7 +1206,7 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 <p>Calculer la diversité (pas l’entropie) de Simpson.</p>
 </blockquote>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb98"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="fu">div_hill</span>(pielou_1972, <span class="at">q =</span> <span class="dv">2</span>, <span class="at">estimator =</span> <span class="st">"naive"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb100"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="fu">div_hill</span>(pielou_1972, <span class="at">q =</span> <span class="dv">2</span>, <span class="at">estimator =</span> <span class="st">"naive"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 12 × 5
    site           weight estimator      order diversity
@@ -1173,12 +1233,12 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 <p>Tracer les profils de diversité de tous les <em>Solidago</em>.</p>
 </blockquote>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb100"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="fu">profile_hill</span>(pielou_1972, <span class="at">estimator =</span> <span class="st">"naive"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb100-2"><a href="#cb100-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">autoplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb102"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="fu">profile_hill</span>(pielou_1972, <span class="at">estimator =</span> <span class="st">"naive"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb102-2"><a href="#cb102-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">autoplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-32-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-34-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1192,7 +1252,7 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 </blockquote>
 <p><em>S. gigantea</em> est moins riche mais plus équitable: son profil de diversité décroit moins vite. On peut comparer la diversité d’ordre 5 par exemple :</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb101"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="fu">div_hill</span>(pielou_1972, <span class="at">q =</span> <span class="dv">5</span>, <span class="at">estimator =</span> <span class="st">"naive"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb103"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="fu">div_hill</span>(pielou_1972, <span class="at">q =</span> <span class="dv">5</span>, <span class="at">estimator =</span> <span class="st">"naive"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 12 × 5
    site           weight estimator      order diversity
@@ -1220,7 +1280,7 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 <p>Décomposez la diversité. Résumez cette décomposition en une ou quelques phrases.</p>
 </blockquote>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb103"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="fu">div_part</span>(pielou_1972, <span class="at">estimator =</span> <span class="st">"naive"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb105"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb105-1"><a href="#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="fu">div_part</span>(pielou_1972, <span class="at">estimator =</span> <span class="st">"naive"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 15 × 6
    site           scale     estimator        order diversity weight
@@ -1245,7 +1305,7 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 <p>La métacommunauté des <em>Soledago</em> est composée de 6,35 espèces effectives de pucerons (diversité <span class="math inline">\(\gamma\)</span>), décomposable en 3.3 espèces par habitat (diversité <span class="math inline">\(\alpha\)</span>) fois 1.91 habitats (diversité <span class="math inline">\(\beta\)</span>) effectifs, c’est à dire sans espèce en commun.</p>
 <p>Avec un estimator asymptotique (bug dans la version publique de divent), les valeurs sont:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb105"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb105-1"><a href="#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="fu">div_part</span>(pielou_1972)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb107"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb107-1"><a href="#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="fu">div_part</span>(pielou_1972)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>! Sample coverage is 0, most estimators will return `NaN`.
 ! Sample coverage is 0, most estimators will return `NaN`.</code></pre>
@@ -1272,17 +1332,17 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 </div>
 </div>
 </section>
-<section id="largeur-de-niches" class="level3">
-<h3 class="anchored" data-anchor-id="largeur-de-niches">Largeur de niches</h3>
+<section id="largeur-de-niches" class="level3" data-number="3.4.3">
+<h3 data-number="3.4.3" class="anchored" data-anchor-id="largeur-de-niches"><span class="header-section-number">3.4.3</span> Largeur de niches</h3>
 <p><em>Pour la suite, nous allons suivre Pielou en étudiant la diversité des habitats occupés par chaque espèce de puceron. A partir d’ici, vous ne pouvez plus appliquer simplement le contenu du cours, mais vous devez étendre les notions que vous connaissez à une approche nouvelle.</em></p>
 <p><em>En considérant que chaque</em> Solidago <em>constitue un habitat distinct pour une espèce de puceron, le nombre d’habitat occupés est un proxy de la taille de sa niche. Un puceron généraliste occupera plus d’habitats (autrement dit, une niche plus large) qu’un puceron spécialiste. La largeur de niche de chaque espèce de puceron est donc définie dans un premier temps par le nombre d’habitats différents qu’il occupe.</em></p>
 <p><em>Les données doivent être organisées différemment avec les espèces de pucerons en ligne et les habitats en colonnes, ce qui nécessite de passer par une matrice de données et de la transposer. Comme le code est un peu laborieux, il est donné ci-dessous.</em></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb108"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the file</span></span>
-<span id="cb108-2"><a href="#cb108-2" aria-hidden="true" tabindex="-1"></a><span class="fu">read_csv</span>(<span class="st">"data/Pielou1972.csv"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb108-3"><a href="#cb108-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Replace missing values by zeros</span></span>
-<span id="cb108-4"><a href="#cb108-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">everything</span>(), <span class="sc">~</span> <span class="fu">replace_na</span>(.x, <span class="dv">0</span>))) <span class="ot">-&gt;</span></span>
-<span id="cb108-5"><a href="#cb108-5" aria-hidden="true" tabindex="-1"></a>  pielou_raw</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb110"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the file</span></span>
+<span id="cb110-2"><a href="#cb110-2" aria-hidden="true" tabindex="-1"></a><span class="fu">read_csv</span>(<span class="st">"data/Pielou1972.csv"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb110-3"><a href="#cb110-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Replace missing values by zeros</span></span>
+<span id="cb110-4"><a href="#cb110-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">everything</span>(), <span class="sc">~</span> <span class="fu">replace_na</span>(.x, <span class="dv">0</span>))) <span class="ot">-&gt;</span></span>
+<span id="cb110-5"><a href="#cb110-5" aria-hidden="true" tabindex="-1"></a>  pielou_raw</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 12 Columns: 11
 ── Column specification ────────────────────────────────────────────────────────
@@ -1293,29 +1353,29 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb110"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the names of the Soledagos</span></span>
-<span id="cb110-2"><a href="#cb110-2" aria-hidden="true" tabindex="-1"></a>pielou_raw <span class="sc">%&gt;%</span> </span>
-<span id="cb110-3"><a href="#cb110-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(site) <span class="ot">-&gt;</span></span>
-<span id="cb110-4"><a href="#cb110-4" aria-hidden="true" tabindex="-1"></a>  pielou_habitats</span>
-<span id="cb110-5"><a href="#cb110-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Make a matrix</span></span>
-<span id="cb110-6"><a href="#cb110-6" aria-hidden="true" tabindex="-1"></a>pielou_raw <span class="sc">%&gt;%</span></span>
-<span id="cb110-7"><a href="#cb110-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Remove the site</span></span>
-<span id="cb110-8"><a href="#cb110-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>site) <span class="sc">%&gt;%</span></span>
-<span id="cb110-9"><a href="#cb110-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Make it a matrix</span></span>
-<span id="cb110-10"><a href="#cb110-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.matrix</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb110-11"><a href="#cb110-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Transpose the matrix</span></span>
-<span id="cb110-12"><a href="#cb110-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">t</span>() <span class="ot">-&gt;</span></span>
-<span id="cb110-13"><a href="#cb110-13" aria-hidden="true" tabindex="-1"></a>  pielou_niches.matrix</span>
-<span id="cb110-14"><a href="#cb110-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Add the column names</span></span>
-<span id="cb110-15"><a href="#cb110-15" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(pielou_niches.matrix) <span class="ot">&lt;-</span> pielou_habitats</span>
-<span id="cb110-16"><a href="#cb110-16" aria-hidden="true" tabindex="-1"></a>pielou_niches.matrix <span class="sc">%&gt;%</span> </span>
-<span id="cb110-17"><a href="#cb110-17" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Make an abundances object</span></span>
-<span id="cb110-18"><a href="#cb110-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_abundances</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb110-19"><a href="#cb110-19" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Set equal weights</span></span>
-<span id="cb110-20"><a href="#cb110-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">weight =</span> <span class="dv">1</span>) <span class="ot">-&gt;</span></span>
-<span id="cb110-21"><a href="#cb110-21" aria-hidden="true" tabindex="-1"></a>  pielou_niches</span>
-<span id="cb110-22"><a href="#cb110-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Display it</span></span>
-<span id="cb110-23"><a href="#cb110-23" aria-hidden="true" tabindex="-1"></a>pielou_niches</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb112"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb112-1"><a href="#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the names of the Soledagos</span></span>
+<span id="cb112-2"><a href="#cb112-2" aria-hidden="true" tabindex="-1"></a>pielou_raw <span class="sc">%&gt;%</span> </span>
+<span id="cb112-3"><a href="#cb112-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(site) <span class="ot">-&gt;</span></span>
+<span id="cb112-4"><a href="#cb112-4" aria-hidden="true" tabindex="-1"></a>  pielou_habitats</span>
+<span id="cb112-5"><a href="#cb112-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Make a matrix</span></span>
+<span id="cb112-6"><a href="#cb112-6" aria-hidden="true" tabindex="-1"></a>pielou_raw <span class="sc">%&gt;%</span></span>
+<span id="cb112-7"><a href="#cb112-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Remove the site</span></span>
+<span id="cb112-8"><a href="#cb112-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>site) <span class="sc">%&gt;%</span></span>
+<span id="cb112-9"><a href="#cb112-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Make it a matrix</span></span>
+<span id="cb112-10"><a href="#cb112-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.matrix</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb112-11"><a href="#cb112-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Transpose the matrix</span></span>
+<span id="cb112-12"><a href="#cb112-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">t</span>() <span class="ot">-&gt;</span></span>
+<span id="cb112-13"><a href="#cb112-13" aria-hidden="true" tabindex="-1"></a>  pielou_niches.matrix</span>
+<span id="cb112-14"><a href="#cb112-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Add the column names</span></span>
+<span id="cb112-15"><a href="#cb112-15" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(pielou_niches.matrix) <span class="ot">&lt;-</span> pielou_habitats</span>
+<span id="cb112-16"><a href="#cb112-16" aria-hidden="true" tabindex="-1"></a>pielou_niches.matrix <span class="sc">%&gt;%</span> </span>
+<span id="cb112-17"><a href="#cb112-17" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Make an abundances object</span></span>
+<span id="cb112-18"><a href="#cb112-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_abundances</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb112-19"><a href="#cb112-19" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Set equal weights</span></span>
+<span id="cb112-20"><a href="#cb112-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">weight =</span> <span class="dv">1</span>) <span class="ot">-&gt;</span></span>
+<span id="cb112-21"><a href="#cb112-21" aria-hidden="true" tabindex="-1"></a>  pielou_niches</span>
+<span id="cb112-22"><a href="#cb112-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Display it</span></span>
+<span id="cb112-23"><a href="#cb112-23" aria-hidden="true" tabindex="-1"></a>pielou_niches</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 14
    site   weight S_canadensis S_nemoralis S_rugosa S_juncea S_gigantea S_hispida
@@ -1336,7 +1396,7 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 </div>
 <p><em>Le nombre d’habitats occupés par chaque espèce de puceron peut être compté avec les fonctions de calcul de la diversité habituelles, appliquées à ce jeu de données inhabituel :</em></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb112"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb112-1"><a href="#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="fu">div_richness</span>(pielou_niches, <span class="at">estimator =</span> <span class="st">"naive"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb114"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb114-1"><a href="#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="fu">div_richness</span>(pielou_niches, <span class="at">estimator =</span> <span class="st">"naive"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 5
    site                weight estimator      order diversity
@@ -1366,12 +1426,12 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 <p>Tracez les profils de diversité des pucerons et faites le lien entre le nombre effectif de <em>Soledago</em> et la largeur de niche.</p>
 </blockquote>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb114"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb114-1"><a href="#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="fu">profile_hill</span>(pielou_niches, <span class="at">estimator =</span> <span class="st">"naive"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb114-2"><a href="#cb114-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">autoplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb116"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb116-1"><a href="#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="fu">profile_hill</span>(pielou_niches, <span class="at">estimator =</span> <span class="st">"naive"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb116-2"><a href="#cb116-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">autoplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-38-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-40-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1382,8 +1442,8 @@ dbl (10): D_nigrotuberculatus, D_nigrotibius, D_caligatus, D_pieloui, D_cana...
 </blockquote>
 <p>L’entropie de Shannon et la diversité de Simpson. La diversité de Simpson est dans le profil de diversité ci-dessus.</p>
 </section>
-<section id="chevauchement-des-niches" class="level3">
-<h3 class="anchored" data-anchor-id="chevauchement-des-niches">Chevauchement des niches</h3>
+<section id="chevauchement-des-niches" class="level3" data-number="3.4.4">
+<h3 data-number="3.4.4" class="anchored" data-anchor-id="chevauchement-des-niches"><span class="header-section-number">3.4.4</span> Chevauchement des niches</h3>
 <p><em>Pielou veut évaluer le chevauchement des niches en plus de leur largeur. Le raisonnement est plus clair avec les nombres de Hill. Si les niches ne se chevauchent pas du tout, on trouve une seule espèce par habitat à condition bien sûr qu’il y ait moins d’espèces que d’habitats. A l’inverse, si toutes les espèces sont totalement généralistes, le nombre d’espèces par habitat est celui des espèces.</em></p>
 <blockquote class="blockquote">
 <p>Quelle est la mesure qui rend compte du chevauchement des niches ? Donnez sa valeur pour q = 1.</p>
