@@ -1,12 +1,12 @@
 on:
   push:
-    branches: master
+    branches: [main, master]
 
 name: Render and Publish
 
 jobs:
   build-deploy:
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
@@ -22,8 +22,6 @@ jobs:
           tinytex: true
       - name: Install dependencies
         run: |
-          options(pkgType = "binary")
-          options(install.packages.check.source = "no")
           install.packages("pak")
           pak::pkg_install(
             c(
