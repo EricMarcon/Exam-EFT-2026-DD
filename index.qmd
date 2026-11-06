@@ -140,12 +140,12 @@ tree_3sp <- function(h) {
   axis(2)
 }
 # Create a tree
-tree_3sp(0.5)
+tree_3sp(0.2)
 ```
 
 > What is the order-0 phylogenetic diversity (Faith's PD) of a community containing the three species, whose phylogenetic tree is shown in the figure?
 
-PD is the sum of branch lengths, i.e. 1 + 0.5 + 0.5 + 0.5 = 2.5 effective species.
+PD is the sum of branch lengths, i.e. 1 + 0.2 + 0.8 + 0.8 = 2.8 effective species.
 
 > What is the possible range of values for `h`?
 
@@ -153,29 +153,21 @@ PD is the sum of branch lengths, i.e. 1 + 0.5 + 0.5 + 0.5 = 2.5 effective specie
 
 > What effect does `h` have on the value of PD?
 
-PD increases with $h$ because the double branch between A, B and their common ancestor replaces the single branch between the ancestor and the root of the tree.
-Note: `h` could just as easily be the length of the branch between the common ancestor of A and B and the root of the tree.
-To check this, change its value in the last line of the code block.
+PD decreases with $h$ because the double branch between A, B and their common ancestor replaces the single branch between the ancestor and the root of the tree.
+Express the value of PD in terms of `h`.
 
-```{r}
-# Small value of h
-tree_3sp(0.1)
-```
-
-> Express the value of PD in terms of `h`.
-
-$PD = 1 + 2 * h + (1 - h) = 2 + h$.
+$PD = 1 + h + 2 * (1 - h) = 3 - h$.
 
 > What is the richness (taxonomic, not phylogenetic) of the community?
 > Explain how $h$ allows us to take into account the closeness between species B and A.
 
 The community contains 3 species.
-This is also the value of PD for $h = 1$, which assumes that species A and B are completely distinct.
-Conversely, for $h = 0$, species B and A are considered identical: PD = 2.
+This is also the value of PD for $h = 0$, which assumes that species A and B are completely distinct.
+Conversely, for $h = 1$, species B and A are considered identical: PD = 2.
 
-> If botanists disagree on whether species B and A are synonymous and a phylogeny shows that their distance $h$ is small, suggest a method to help them reach agreement.
+> If botanists disagree on whether species B and A are synonymous and a phylogeny shows that their distance is small, suggest a method to help them reach agreement.
 
-The value of $h$ describes the distance between species B and A: PD takes this into account since its value is $2 + h$.
+The value of $h$ describes the distance between species B and A: PD takes this into account.
 PD therefore allows us to describe species richness without having to decide between 2 and 3 species, the extreme cases of $h = 0$ or $h = 1$.
 
 ## Lognormal distribution
@@ -359,20 +351,14 @@ The diversity of order 5 of *S. gigantea* exceeds that of *S. juncea*: neither h
 *S_ohioensis* is present in a single habitat.
 Both are perfectly evenly distributed.
 
-> Partition the diversity.
+> Partition the richness.
 > Summarise this partitioning in one or a few sentences.
 
 ```{r}
-div_part(pielou_1972, estimator = "naive")
+div_part(pielou_1972, q = 0, estimator = "naive")
 ```
 
-The *Soledago* metacommunity comprises 6.35 effective aphid species (diversity $\gamma$), which can be broken down into 3.3 species per habitat (diversity $\alpha$) multiplied by 1.91 effective habitats (diversity $\beta$), i.e. with no species in common.
-
-With the asymptotic estimators (bug in divent published version), the values are:
-
-```{r}
-div_part(pielou_1972)
-```
+The *Soledago* metacommunity comprises 10 aphid species (diversity $\gamma$), which can be broken down into close to 5 species per habitat (diversity $\alpha$) multiplied by close to 2 effective habitats (diversity $\beta$), i.e. with no species in common.
 
 ### Niche width
 
@@ -530,12 +516,12 @@ tree_3sp <- function(h) {
   axis(2)
 }
 # Make a tree
-tree_3sp(0.5)
+tree_3sp(0.2)
 ```
 
 > Quelle est la diversité phylogénétique d'ordre 0 (PD de Faith) d'une communauté contenant les trois espèces, dont l'arbre phylogénétique est celui de la figure ?
 
-PD est la longueur totale de toutes les branches, c'est-à-dire 1 + 0,5 + 0,5 + 0,5 = 2,5 espèces effectives.
+PD est la longueur totale de toutes les branches, c'est-à-dire 1 + 0,2 + 0,8 + 0,8 = 2,8 espèces effectives.
 
 > Quelle est l'étendue possible des valeurs de `h` ?
 
@@ -543,30 +529,23 @@ PD est la longueur totale de toutes les branches, c'est-à-dire 1 + 0,5 + 0,5 + 
 
 > Quel est l'effet de `h` sur la valeur de PD ?
 
-PD augmente avec $h$ parce que la double branche entre A, B et leur ancêtre commune remplace branche simple entre l'ancêtre et la racine de l'arbre.
-Remarque: `h` pourrait aussi bien être la longueur de la branche entre l'ancêtre de A et B et la racine de l'arbre.
-Pour vérifier, il faut changer sa valeur dans la dernière ligne du bloc de code.
-
-```{r}
-# Small value of h
-tree_3sp(0.1)
-```
+PD diminue avec $h$ parce que la double branche entre A, B et leur ancêtre commune remplace branche simple entre l'ancêtre et la racine de l'arbre.
 
 > Ecrivez la valeur de PD en fonction de \`h\`.
 
-$PD = 1 + 2 * h + (1 - h) = 2 + h$.
+$PD = 1 + h + 2 * (1 - h) = 3 - h$.
 
 > Quel est la richesse (taxonomique, pas phylogénétique) de la communauté ?
 > Expliquez comment $h$ permet de prendre en compte la proximité entre les espèces B et A.
 
 La communauté contient 3 espèces.
-C'est aussi la valeur de PD pour $h = 1$, qui considère que les espèces A et B sont complètement distinctes.
-Pour $h = 0$ à l'inverse, on considère que les espèces B et A sont identiques : PD = 2.
+C'est aussi la valeur de PD pour $h = 0$, qui considère que les espèces A et B sont complètement distinctes.
+Pour $h = 1$ à l'inverse, on considère que les espèces B et A sont identiques : PD = 2.
 
-> Si les botanistes sont en désaccord sur la synonymie ou non des espèces B et A et qu'une phylogénie montre que leur distance $h$ est faible, proposez une méthode pour les mettre d'accord.
+> Si les botanistes sont en désaccord sur la synonymie ou non des espèces B et A et qu'une phylogénie montre que leur distance est faible, proposez une méthode pour les mettre d'accord.
 
-La valeur de $h$ décrit la distance entre les espèces B et A : PD la prend en compte puisque sa valeur est $2 + h$.
-PD permet donc de décrire la richesse sans trancher entre 2 et 3 espèces, cas extrêmes de $h = 0$ ou $h = 1$.
+La valeur de $h$ décrit la distance entre les espèces B et A : PD la prend en compte.
+PD permet donc de décrire la richesse sans trancher entre 2 et 3 espèces, cas extrêmes de $h = 1$ ou $h = 0$.
 
 ## Distribution lognormale
 
@@ -753,20 +732,14 @@ La diversité d'ordre 5 de *S. gigantea* dépasse celle de *S. juncea* : aucun d
 *S_ohioensis* n'est présent que dans un seul habitat.
 Les deux espèces sont distribuées parfaitement équitablement.
 
-> Décomposez la diversité.
+> Décomposez la richesse.
 > Résumez cette décomposition en une ou quelques phrases.
 
 ```{r}
-div_part(pielou_1972, estimator = "naive")
+div_part(pielou_1972, q = 0, estimator = "naive")
 ```
 
-La métacommunauté des *Soledago* est composée de 6,35 espèces effectives de pucerons (diversité $\gamma$), décomposable en 3.3 espèces par habitat (diversité $\alpha$) fois 1.91 habitats (diversité $\beta$) effectifs, c'est à dire sans espèce en commun.
-
-Avec un estimator asymptotique (bug dans la version publique de divent), les valeurs sont:
-
-```{r}
-div_part(pielou_1972)
-```
+La métacommunauté des *Soledago* est composée de 10 espèces de pucerons (diversité $\gamma$), décomposable en environ 5 espèces par habitat (diversité $\alpha$) multipliées par environ 2 habitats (diversité $\beta$) effectifs, c'est à dire sans espèce en commun.
 
 ### Largeur de niches
 
